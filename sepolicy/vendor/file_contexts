@@ -17,6 +17,9 @@
 /data/vendor/oemnvitems/4678_0    u:object_r:wifi_nv_data_file:s0
 /data/vendor/oemnvitems/4678_1    u:object_r:wifi_nv_data_file:s0
 
+# Dolby
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
+
 # Devices
 /dev/audio_ultrasound     u:object_r:ultrasound_device:s0
 /dev/dash                 u:object_r:dash_device:s0

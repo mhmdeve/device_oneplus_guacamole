@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/guacamole/device.mk)
 # Inherit some common ArrowOS stuff.
 $(call inherit-product, vendor/arrow/config/common.mk)
 
+# Moto Dolby
+$(call inherit-product, vendor/motorola/dolby/dolby-vendor.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := arrow_guacamole
 PRODUCT_DEVICE := guacamole
