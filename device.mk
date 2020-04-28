@@ -436,7 +436,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor:64 \
     android.frameworks.sensorservice@1.0.vendor \
     als_correction_service.oneplus7pro \
-    android.hardware.sensors@2.0-service.oneplus7pro \
+    android.hardware.sensors@2.1-service.oneplus7pro \
     libsensorndkbridge
 
 # Servicetracker
