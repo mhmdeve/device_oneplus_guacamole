@@ -108,6 +108,10 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest-qva.xml
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_oneplus-sm8150
+TARGET_RECOVERY_DEVICE_MODULES := libinit_oneplus-sm8150
+
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 
