@@ -56,11 +56,28 @@ public class DeviceSettings extends PreferenceFragment
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
         mHBMModeSwitch.setEnabled(HBMModeSwitch.isSupported());
         mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
+        mHBMModeSwitch.setOnPreferenceChangeListener(this);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mHBMModeSwitch.setChecked(HBMModeSwitch.isCurrentlyEnabled(this.getContext()));
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mHBMModeSwitch) {
+            Boolean enabled = (Boolean) newValue;
+            Utils.writeValue(HBMModeSwitch.getFile(), enabled ? "5" : "0");
+            Intent hbmIntent = new Intent(this.getContext(),
+                    com.aosip.device.DeviceSettings.HBMModeService.class);
+            if (enabled) {
+                this.getContext().startService(hbmIntent);
+            } else {
+                this.getContext().stopService(hbmIntent);
+            }
+        }
         return true;
     }
 
