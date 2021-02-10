@@ -35,3 +35,7 @@ PRODUCT_COPY_FILES += \
 
 # Mark as official build
 OFFICIAL_BUILD := true
+    
+# Wifi Overlay
+PRODUCT_PACKAGES += \
+    OnePlus7ProWifiOverlay
