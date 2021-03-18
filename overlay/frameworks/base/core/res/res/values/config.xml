@@ -430,15 +430,10 @@
         <item>/apex/com.android.art/javalib/core-oj.jar</item>
         <item>/apex/com.android.media/javalib/updatable-media.jar</item>
         <item>"/system/bin/surfaceflinger"</item>
-        <item>/system/framework/arm64/boot-framework.oat</item>
-        <item>/system/framework/arm64/boot-QPerformance.oat</item>
-        <item>/system/framework/arm64/boot-UxPerformance.oat</item>
         <item>/system/framework/framework.jar</item>
-        <item>/system/framework/oat/arm64/services.odex</item>
         <item>/system/framework/services.jar</item>
         <item>/system/lib64/libsurfaceflinger.so</item>
         <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
-        <item>"/system_ext/priv-app/SystemUIGoogle/oat/arm64/SystemUIGoogle.odex"</item>
         <item>"/system_ext/priv-app/DaxUI/DaxUI.apk"</item>
         <item>"/system_ext/priv-app/daxService/daxService.apk"</item>
     </string-array>
