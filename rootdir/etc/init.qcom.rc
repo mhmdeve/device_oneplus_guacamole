@@ -28,11 +28,6 @@
 import /vendor/etc/init/hw/init.qti.ufs.rc
 #ifdef VENDOR_EDIT
 import /vendor/etc/init/hw/init.oem.rc
-import /vendor/etc/init/hw/init.oem.debug.rc
-#endif VENDOR_EDIT
-
-#ifdef VENDOR_EDIT
-import /vendor/etc/init/hw/init.guacamoleg.rc
 #endif VENDOR_EDIT
 
 import /vendor/etc/init/hw/init.qcom.usb.rc

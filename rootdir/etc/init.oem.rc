@@ -237,10 +237,6 @@ on fs
 	chmod 0666 /sys/class/drm/card0-DSI-1/dimlayer_bl_en
 	chmod 0666 /sys/class/drm/card0-DSI-1/dither_en
 
-#   ken.lin@ASTI, 2019/6/21, add for fsc
-    chown system system /sys/module/fsc/parameters/enable
-    chmod 0664 /sys/module/fsc/parameters/enable
-
 on boot
 #ifdef VENDOR_EDIT
     chmod 0666 /dev/goodix_fp
@@ -388,43 +384,6 @@ on post-fs-data
     mkdir /data/vendor/oemnvitems 0771 radio radio
     #brandon.zeng@Conn,2020/08/11. move data path to post-fs-data
     mkdir /data/vendor/nfc 0770 nfc nfc
-    # Ted.Lin@ASTI 2019/06/12 add for CONFIG_HOUSTON
-    chown system system /sys/module/houston/parameters/fps_boost
-    chown system system /sys/module/houston/parameters/fps_data_sync
-    chown system system /sys/module/houston/parameters/perf_ready
-    chown system system /sys/module/houston/parameters/ais_enable
-    chown system system /sys/module/houston/parameters/sample_rate_ms
-    chown system system /sys/module/houston/parameters/ht_enable
-    chown system system /sys/module/houston/parameters/fps_boost_enable
-    chown system system /sys/module/houston/parameters/fps_boost_strategy
-    chown system system /sys/module/houston/parameters/tb_ctl
-    chown system system /sys/module/houston/parameters/tb_enable
-    chown system system /sys/module/houston/parameters/reset
-    chown system system /sys/module/houston/parameters/hwui_boost_enable
-    chown system system /sys/module/houston/parameters/fuse_boost
-    chown system system /dev/ht_ctl
-    chown system system /sys/module/pccore/parameters/params
-    chown system system /sys/module/tpd/parameters/tpd_enable
-    chown system system /sys/module/tpd/parameters/tpd_cmds
-    chown system system /sys/module/tpd/parameters/tpd_id
-    chown system system /sys/module/tpd/parameters/tpd_dynamic
-    chown system system /sys/module/fuse/parameters/shortcircuit
-    chown system system /sys/module/fuse/parameters/sct_mode
-    # Jacky.Ho@OPTI 2020/09/23 add for [OSP-8617]
-    chown system system /sys/module/houston/parameters/game_fps_pid
-    chown system system /sys/module/houston/parameters/game_info
-    # fps stabilizer
-    chown system system /sys/module/houston/parameters/efps_max
-    chown system system /sys/module/houston/parameters/fps_boost_strategy
-    chown system system /sys/module/houston/parameters/egl_buf
-    chown system system /sys/module/houston/parameters/ht_online_config_update
-    # Jacky.Ho@OPTI 2020/09/30 add for [OPTI-85]
-    chown system system /sys/module/tpp/parameters/tpp_on
-    chown system system /sys/module/tpp/parameters/strategy
-
-# Ted.Lin@ASTI 2019/06/12 add for CONFIG_CONTROL_CENTER
-    chown system system /dev/cc_ctl
-    chown system system /proc/cc_ctl
 
 #endif /* VENDOR_EDIT */
 
@@ -437,12 +396,6 @@ on post-fs-data
     mkdir /mnt/vendor/persist/hdcp  775 media mediadrm
     restorecon /mnt/vendor/persist/hdcp
 #endif
-
-# ifdef VENDOR_EDIT
-# denzel.chen@performance, 2020/05/12, add for OPBRITN-3462
-    chmod 664 /sys/module/memplus_core/parameters/memory_plus_wake_memex
-    chown system system /sys/module/memplus_core/parameters/memory_plus_wake_memex
-# endif
 
     # neil.sun@Connectivity, 2020/08/12, add for wifi minidump
     mkdir /data/vendor/ramdump/wifi 0770 system system
@@ -679,21 +632,6 @@ on property:gf.debug.dump_path=*
     mkdir /sdcard/Android/data/gf_file 0755 system ext_data_rw
 
 #endif
-
-# ken.lin@ASTI, 2019/6/21, add for memplus
-service memplus_config /vendor/bin/sh /vendor/etc/vendor.memplus.sh
-    user root
-    disabled
-    oneshot
-    seclabel u:r:vendor_qti_init_shell:s0
-
-on property:persist.vendor.memplus.enable=*
-    start memplus_config
-
-on property:persist.sys.memplus.swappiness=*
-    write /proc/sys/vm/swappiness ${persist.sys.memplus.swappiness}
-on property:persist.sys.memplus.direct_swappiness=*
-    write /proc/sys/vm/direct_swappiness ${persist.sys.memplus.direct_swappiness}
 
 #ifdef VENDOR_EDIT
 #brandon.zeng@Conn,2020/05/08. add for nfc pnscr tool
@@ -1014,24 +952,3 @@ service chmodkeyboxxmldir /system/bin/chmod 777 -R /mnt/vendor/op2/.lii
     oneshot
     seclabel u:r:vold:s0
 # endif
-
-#alden.zhang@OPTI, 2020/7/18. [OSP-8064], add for IOLIMIT
-on property:persist.sys.iolimiter.enable=true
-    write /proc/iolimit_enable 1
-    write /sys/module/oneplus_healthinfo/parameters/ohm_action_ctrl Y
-    chown system system /sys/module/oneplus_healthinfo
-    chown system system /sys/module/oneplus_healthinfo/parameters
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_iowait_h_ms
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_iowait_l_ms
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_read_thresh
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_write_thresh
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_sample_time
-    chown system system /sys/module/oneplus_healthinfo/parameters/ohm_action_ctrl
-    chown system system /proc/iolimit_enable
-
-#huangwen.chen#OPTI, 2020/9/16, [OPTI-43], add for zram writeback
-on property:persist.vendor.oem.dump=0
-    setprop persist.vendor.zwriteback.backup 0
-
-on property:persist.vendor.oem.dump=1
-    setprop persist.vendor.zwriteback.backup 1
