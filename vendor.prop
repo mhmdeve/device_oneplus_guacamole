@@ -149,6 +149,13 @@ persist.dbg.wfc_avail_ovr=1
 # Keystore
 ro.hardware.keystore_desede=true
 
+<<<<<<< HEAD
+=======
+# Media
+debug.stagefright.omx_default_rank=0
+mm.enable.smoothstreaming=true
+
+>>>>>>> bfc4107 (sm8150-common: overlay: Reduce pop up cam delay on face unlock)
 # NFC
 ro.camera.notify_nfc=1
 ro.hardware.nfc_nci=nqx.default

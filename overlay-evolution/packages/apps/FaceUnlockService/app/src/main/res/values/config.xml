@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <!--
      Copyright (C) 2019 The LineageOS Project
 
@@ -16,6 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <integer name="cam_open_delay_ms">500</integer>
     <integer name="override_front_cam_id">1</integer>
+    <integer name="cam_open_delay_ms">350</integer>
 </resources>
