@@ -182,6 +182,7 @@ PRODUCT_PACKAGES += \
     libxml2 \
     OnePlusCameraHelper \
     Snap \
+    vendor.oneplus.hardware.camera@1.0.vendor:64 \
     vendor.oneplus.camera.CameraHIDL@1.0.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor
 
