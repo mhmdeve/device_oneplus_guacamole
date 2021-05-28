@@ -10,9 +10,11 @@ $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 $(call inherit-product, vendor/oneplus/oneplus7pro/oneplus7pro-vendor.mk)
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-aospa
+PRODUCT_PACKAGES += \
+    AOSPAOnePlus7ProSystemUI \
+    OnePlus7ProFrameworks \
+    OnePlus7ProSettingsProvider \
+    OnePlus7ProSystemUI
 
 # Audio
 PRODUCT_COPY_FILES += \
