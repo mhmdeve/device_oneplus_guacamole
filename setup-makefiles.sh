@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE=guacamole
+export DEVICE=oneplus7pro
 export DEVICE_COMMON=sm8150-common
 export VENDOR=oneplus
 
