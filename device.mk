@@ -31,7 +31,11 @@ PRODUCT_PACKAGES += \
 
 # Mark as official build
 OFFICIAL_BUILD := true
-    
+
+# NoCutout
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Wifi Overlay
 PRODUCT_PACKAGES += \
     OnePlus7ProWifiOverlay
