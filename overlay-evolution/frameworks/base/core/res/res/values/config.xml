@@ -68,6 +68,7 @@
     <string-array name="config_cameraAuxPackageAllowList" translatable="false">
         <item>com.android.camera</item>
         <item>com.oneplus.camera</item>
+        <item>com.google.android.GoogleCamera</item>
         <item>com.google.android.apps.cameralite</item>
         <item>org.codeaurora.snapcam</item>
         <item>org.lineageos.aperture</item>
