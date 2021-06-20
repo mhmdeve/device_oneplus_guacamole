@@ -54,6 +54,7 @@
     <string-array name="config_cameraAuxPackageAllowList" translatable="false">
         <item>com.oneplus.factorymode</item>
         <item>com.oneplus.camera</item>
+        <item>com.google.android.GoogleCamera</item>
         <item>com.oneplus.healthcheck</item>
         <item>com.oem.autotest</item>
         <item>org.pixelexperience.faceunlock</item>
