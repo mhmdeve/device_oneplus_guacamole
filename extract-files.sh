@@ -63,6 +63,9 @@ function blob_fixup() {
                 echo "sensors.oneplus.so" >> "$shim"
             done
             ;;
+        vendor/bin/hw/qcrild)
+            "${PATCHELF}" --add-needed libril_shim.so "${2}"
+            ;;
     esac
 }
 
