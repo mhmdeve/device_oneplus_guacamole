@@ -90,6 +90,9 @@ for mode_node in modes.findall('Mode'):
 tree.write(sys.argv[1], encoding='utf-8', xml_declaration=True)
 EOF
             ;;
+        vendor/bin/hw/qcrild)
+            "${PATCHELF}" --add-needed libril_shim.so "${2}"
+            ;;
     esac
 }
 
