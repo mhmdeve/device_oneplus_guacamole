@@ -137,10 +137,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml \
     $(LOCAL_PATH)/configs/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml 
 
+# Dolby
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.dolby.ds2.hardbypass=false \
     persist.vendor.audio_fx.current=dolby \
+    ro.audio.monitorRotation=true \
     ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
 
 PRODUCT_COPY_FILES += \
