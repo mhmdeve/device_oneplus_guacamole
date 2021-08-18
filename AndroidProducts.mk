@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/kscope_guacamole.mk
+    $(LOCAL_DIR)/arrow_guacamole.mk
