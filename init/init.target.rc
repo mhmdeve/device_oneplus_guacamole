@@ -298,7 +298,12 @@ service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class main
     oneshot
 
-
+service adsprpcd /vendor/bin/adsprpcd
+   class main
+   user media
+   group media
+   disabled
+   
 on property:vold.decrypt=trigger_restart_framework
     start cnss_diag
 
