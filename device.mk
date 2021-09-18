@@ -25,6 +25,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OnePlusCameraHelper
 
+# OnePlus apps
+$(call inherit-product, vendor/oneplus/apps/guacamole/config.mk)
+
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom
