@@ -32,10 +32,6 @@ $(call inherit-product, vendor/oneplus/apps/guacamole/config.mk)
 PRODUCT_PACKAGES += \
     fstab.qcom
 
-# OPFeature
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/odm_feature_list:$(TARGET_COPY_OUT_ODM)/etc/odm_feature_list
-
 # Mark as official build
 OFFICIAL_BUILD := true
     
