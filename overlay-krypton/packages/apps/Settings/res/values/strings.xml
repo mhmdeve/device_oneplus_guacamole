@@ -16,5 +16,5 @@
 
 <resources>
     <!-- Device maintainer -->
-    <string name="device_maintainer_name">Pranav Santhosh</string>
+    <string name="device_maintainer_name">Pranav Santhosh\nAlfred Mathew\nZlatan Radovanovic</string>
 </resources>
