@@ -1,8 +1,7 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.oneplus_msmnile.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile.rc"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [
@@ -17,6 +16,8 @@ cc_binary {
         "libhardware",
         "libutils",
         "android.hardware.biometrics.fingerprint@2.1",
+        "android.hardware.biometrics.fingerprint@2.2",
+        "android.hardware.biometrics.fingerprint@2.3",
     ],
 
 }
