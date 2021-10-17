@@ -42,9 +42,6 @@
          config to 7. -->
     <integer name="config_deviceHardwareKeys">64</integer>
 
-    <!-- Shows the required view for in-display fingerprint -->
-    <bool name="config_supportsInDisplayFingerprint">true</bool>
-
     <!-- Whether to enable shifting of elements in the status bar and the navigation bar.
          Should be enabled for OLED devices to reduce/prevent burn in on the status bar
          and on the navigation bar and disabled for all other devices. -->
