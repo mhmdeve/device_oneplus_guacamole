@@ -30,8 +30,8 @@ cc_binary {
         "liblog",
         "libutils",
         "vendor.lineage.biometrics.fingerprint.inscreen@1.0",
-        "//device/oneplus/common:vendor.oneplus.fingerprint.extension@1.0",
-        "//device/oneplus/common:vendor.oneplus.hardware.display@1.0",
+        "//device/oneplus/guacamole:vendor.oneplus.fingerprint.extension@1.0",
+        "//device/oneplus/guacamole:vendor.oneplus.hardware.display@1.0",
     ],
     proprietary: true,
 }
