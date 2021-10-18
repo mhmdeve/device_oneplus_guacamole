@@ -53,14 +53,6 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
-function blob_fixup() {
-    case "${1}" in
-        vendor/bin/hw/qcrild)
-            "${PATCHELF}" --add-needed libril_shim.so "${2}"
-            ;;
-    esac
-}
-
 # Initialize the helper
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
 
