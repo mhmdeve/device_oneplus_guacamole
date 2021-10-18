@@ -4,11 +4,7 @@
     "target_path": "kernel/oneplus/sm8150"
   },
   {
-    "repository": "android_device_oneplus_common",
-    "target_path": "device/oneplus/common"
-  },
-  {
-    "repository": "android_vendor_oneplus_sm8150-common",
-    "target_path": "vendor/oneplus/sm8150-common"
+    "repository": "android_vendor_oneplus_guacamole",
+    "target_path": "vendor/oneplus/guacamole"
   }
 ]

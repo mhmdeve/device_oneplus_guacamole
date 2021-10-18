@@ -31,17 +31,7 @@ using android::ScreenshotClient;
 using android::sp;
 using android::SurfaceComposerClient;
 
-#if defined(DEVICE_guacamole) || defined(DEVICE_guacamoleg)
 static Rect screenshot_rect(251, 988, 305, 1042);
-#elif defined(DEVICE_guacamoleb)
-static Rect screenshot_rect(626, 192, 666, 232);
-#elif defined(DEVICE_hotdog) || defined(DEVICE_hotdogg)
-static Rect screenshot_rect(255, 903, 301, 949);
-#elif defined(DEVICE_hotdogb)
-static Rect screenshot_rect(499, 110, 525, 136);
-#else
-#error No ALS configuration for this device
-#endif
 
 class TakeScreenshotCommand : public FrameworkCommand {
   public:

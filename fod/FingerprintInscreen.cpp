@@ -33,6 +33,10 @@
 #define OP_DISPLAY_NOTIFY_PRESS 9
 #define OP_DISPLAY_SET_DIM 10
 
+#define FOD_POS_X 610
+#define FOD_POS_Y 2618
+#define FOD_SIZE 220
+
 namespace vendor {
 namespace lineage {
 namespace biometrics {
