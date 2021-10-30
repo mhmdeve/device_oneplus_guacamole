@@ -28,4 +28,7 @@
 
     <!--  Allow CornerHandleView and PathSpecCornerPathRenderer to decouple from corner-radius -->
     <dimen name="config_rounded_mask_size">174px</dimen>
+
+    <!-- Offset for alert slider dialog from status bar -->
+    <integer name="config_alertSliderOffset">800</integer>
 </resources>
