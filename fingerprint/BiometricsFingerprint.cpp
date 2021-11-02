@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro"
 
 #include <hardware/hw_auth_token.h>
 

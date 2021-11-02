@@ -14,7 +14,7 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.sensors@2.0-service.oneplus_msmnile",
+    name: "android.hardware.sensors@2.0-service.oneplus7pro",
     stem: "android.hardware.sensors@2.0-service.multihal",
     defaults: [
         "hidl_defaults",
@@ -54,7 +54,7 @@ cc_binary {
 }
 
 cc_binary {
-    name: "als_correction_service.oneplus_msmnile",
+    name: "als_correction_service.oneplus7pro",
     stem: "als_correction_service",
     init_rc: ["als_correction_service.rc"],
     srcs: [

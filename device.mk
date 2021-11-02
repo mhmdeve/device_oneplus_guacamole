@@ -257,7 +257,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile \
+    android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro \
     android.hardware.biometrics.fingerprint@2.3.vendor \
     vendor.oneplus.fingerprint.extension@1.0.vendor \
     vendor.oneplus.hardware.display@1.0.vendor
@@ -392,7 +392,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oneplus_msmnile
+    vendor.qti.hardware.vibrator.service.oneplus7pro
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
@@ -403,8 +403,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    als_correction_service.oneplus_msmnile \
-    android.hardware.sensors@2.0-service.oneplus_msmnile \
+    als_correction_service.oneplus7pro \
+    android.hardware.sensors@2.0-service.oneplus7pro \
     libsensorndkbridge
 
 # Servicetracker

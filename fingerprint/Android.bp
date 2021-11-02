@@ -1,7 +1,7 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.oneplus_msmnile.rc"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro.rc"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [
@@ -24,7 +24,7 @@ cc_binary {
 }
 
 cc_library_static {
-    name: "libudfps_extension.oneplus_msmnile",
+    name: "libudfps_extension.oneplus7pro",
     srcs: ["UdfpsExtension.cpp"],
     whole_static_libs: ["//device/oneplus/guacamole:vendor.oneplus.hardware.display@1.0"],
     include_dirs: [
