@@ -11,28 +11,17 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
+    <!-- Display settings -->
     <string name="device_title">Cài đặt OnePlus</string>
     <string name="device_summary">Điều chỉnh cài đặt thiết bị cụ thể của OnePlus</string>
     <string name="display_title">Màn hình hiển thị</string>
-    <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">chế độ sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Độ sáng cao</string>
-    <string name="wide_color_mode_title">Dải màu rộng</string>
-    <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">Dải màu rộng DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Chế độ ban đêm</string>
-    <string name="panel_category_title">Chế độ màn hình</string>
-    <string name="panel_category_summary">Các chế độ căn chỉnh màu màn hình</string>
-    <string name="off_mode_title">Tắt</string>
-    <string name="tile_panel_mode">Chế độ màn hình</string>
     <string name="dc_mode_summary"></string>
     <string name="dc_mode_title">DC-Dimming</string>
     <string name="tile_hbm_mode">Độ sáng cao</string>
     <string name="tile_dc_mode">DC-Dimming</string>
-    <!-- Screen off Gestures : Input -->
+    <!-- Screen off Gestures - Input -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
     <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
     <string name="touchscreen_gestures_haptic_feedback_title">Haptic feedback</string>
@@ -56,7 +45,7 @@
     <string name="touchscreen_gesture_letter_v_title">Draw the letter \"V\"</string>
     <string name="touchscreen_gesture_letter_w_title">Draw the letter \"W\"</string>
     <string name="touchscreen_gesture_letter_z_title">Draw the letter \"Z\"</string>
-    <!-- Screen off Gestures : Actions -->
+    <!-- Screen off Gestures - Actions -->
     <string name="touchscreen_gesture_action_dialog_title">Gesture action</string>
     <string name="touchscreen_gesture_action_do_nothing">Do nothing</string>
     <string name="touchscreen_gesture_action_flashlight">Toggle flashlight</string>
@@ -71,32 +60,4 @@
     <string name="touchscreen_gesture_action_volume_down">Lower media volume</string>
     <string name="touchscreen_gesture_action_volume_up">Raise media volume</string>
     <string name="touchscreen_gesture_action_ambient_display">Show ambient display</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Screen refresh</string>
-    <string name="tile_refresh_rate">Screen refresh rate</string>
-    <string name="auto_refresh_rate_summary">Let apps decide what refresh rate to use</string>
-    <string name="auto_refresh_rate_title">Auto refresh mode</string>
-    <string name="refresh_rate_summary">Choose between 60Hz or 90Hz peak refresh</string>
-    <string name="refresh_rate_title">Force 90Hz peak refresh rate</string>
-    <string name="refresh_rate_warning">Using forced 90Hz will impact battery life significantly</string>
-    <string name="fps_info_title">FPS overlay</string>
-    <string name="fps_info_summary">Show overlay with with current frames per second</string>
-    <string name="panel_mode_info">Disable panel mode requires reboot.</string>
-    <!-- Notification slider -->
-    <string name="notification_slider_category_title">Thanh trượt thông báo</string>
-    <string name="notification_slider_selection_dialog_title">Tác vụ</string>
-    <string name="notification_slider_top_position">Phía trên</string>
-    <string name="notification_slider_middle_position">Chính giữa</string>
-    <string name="notification_slider_bottom_position">Phía dưới</string>
-    <string name="notification_slider_mode_total_silence">Tất cả im lặng</string>
-    <string name="notification_slider_mode_priority_only">Chỉ ưu tiên</string>
-    <string name="notification_slider_mode_silent">Im lặng</string>
-    <string name="notification_slider_mode_vibrate">Rung</string>
-    <string name="notification_slider_mode_none">Bình thường</string>
-    <string name="buttons_dashboard_summary">Cài đặt Alert Slider</string>
-    <!-- Vibration slider -->
-    <string name="category_vibrator">Bộ rung</string>
-    <string name="vib_strength_title_head">Độ mạnh</string>
-    <string name="vib_strength_summary_head">Chọn độ mạnh của bộ rung</string>
-    <string name="vibration_warning">Setting strength too high may cause permanent hardware damage</string>
 </resources>

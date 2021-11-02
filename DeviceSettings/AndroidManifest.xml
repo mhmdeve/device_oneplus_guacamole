@@ -56,17 +56,6 @@
         <activity android:name=".DeviceSettings" />
         <activity android:name=".KeyHandler" />
 
-        <activity
-            android:name="com.aosip.device.DeviceSettings.PanelSettingsActivity"
-            android:exported="true"
-            android:label="@string/panel_category_title"
-            android:launchMode="singleTask" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-
         <receiver android:name="com.aosip.device.DeviceSettings.Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
@@ -85,16 +74,6 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.aosip.device.DeviceSettings.PanelModeTileService"
-            android:icon="@drawable/ic_panel_tile"
-            android:label="@string/tile_panel_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
             android:name="com.aosip.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
@@ -103,20 +82,6 @@
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
-        </service>
-        <service
-            android:name="com.aosip.device.DeviceSettings.RefreshRateTileService"
-            android:icon="@drawable/ic_refresh_tile_60"
-            android:label="@string/tile_refresh_rate"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-
-        <service android:name="com.aosip.device.DeviceSettings.FPSInfoService"
-                android:exported="false">
         </service>
 
         <!-- Search indexing -->

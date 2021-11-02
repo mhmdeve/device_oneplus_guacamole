@@ -11,28 +11,17 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
+    <!-- Display settings -->
     <string name="device_title">Configuraciones de OnePlus</string>
     <string name="device_summary">Ajuste para dispositivo especifico de OnePlus</string>
     <string name="display_title">Mostrar</string>
-    <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">modo sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Modo de alto brillo</string>
-    <string name="wide_color_mode_title">Modo amplio de color</string>
-    <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">Modo de amplia gama de colores DCI-P3</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Modo nocturno</string>
-    <string name="panel_category_title">Modos de panel</string>
-    <string name="panel_category_summary">Modos para el panel de corrección de color</string>
-    <string name="off_mode_title">Apagado</string>
-    <string name="tile_panel_mode">Modos de panel</string>
     <string name="dc_mode_summary"></string>
     <string name="dc_mode_title">Ajuste de Brillo alternativo [DC-Diming]</string>
     <string name="tile_hbm_mode">Modos de alto brillo</string>
     <string name="tile_dc_mode">Ajuste de Brillo alternativo [DC-Diming]</string>
-    <!-- Screen off Gestures : Input -->
+    <!-- Screen off Gestures - Input -->
     <string name="touchscreen_gesture_settings_title">Gestos en pantalla táctil</string>
     <string name="touchscreen_gesture_settings_summary">Realizar varios gestos en pantalla para acciones rápidas</string>
     <string name="touchscreen_gestures_haptic_feedback_title">Respuesta táctil</string>
@@ -56,7 +45,7 @@
     <string name="touchscreen_gesture_letter_v_title">Dibuje la letra «V»</string>
     <string name="touchscreen_gesture_letter_w_title">Dibujar la letra «W»</string>
     <string name="touchscreen_gesture_letter_z_title">Dibujar la letra \"Z\"</string>
-    <!-- Screen off Gestures : Actions -->
+    <!-- Screen off Gestures - Actions -->
     <string name="touchscreen_gesture_action_dialog_title">Acción del gesto</string>
     <string name="touchscreen_gesture_action_do_nothing">No hacer nada</string>
     <string name="touchscreen_gesture_action_flashlight">Encender/apagar linterna</string>
@@ -71,32 +60,4 @@
     <string name="touchscreen_gesture_action_volume_down">Reducir volumen de multimedia</string>
     <string name="touchscreen_gesture_action_volume_up">Incrementa el volumen multimedia</string>
     <string name="touchscreen_gesture_action_ambient_display">Mostrar pantalla ambiente</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Refresco de pantalla</string>
-    <string name="tile_refresh_rate">Frecuencia de refresco de la pantalla</string>
-    <string name="auto_refresh_rate_summary">Permitir que las aplicaciones decidan qué frecuencia de refresco usar</string>
-    <string name="auto_refresh_rate_title">Modo de refresco automático</string>
-    <string name="refresh_rate_summary">Elige entre la taza de refresco 60 Hz o 90 Hz </string>
-    <string name="refresh_rate_title">Forzar taza de refresco a 90 Hz</string>
-    <string name="refresh_rate_warning">El uso forzado de la frecuencia de refresco máxima afectará significativamente a la duración de la batería</string>
-    <string name="fps_info_title">Capas de cuadros por segundo</string>
-    <string name="fps_info_summary">Mostrar capas con los cuadros por segundos actuales</string>
-    <string name="panel_mode_info">Deshabilitar modos de color necesita un reinicio.</string>
-    <!-- Notification slider -->
-    <string name="notification_slider_category_title">Control deslizante de notificaciones</string>
-    <string name="notification_slider_selection_dialog_title">Acción</string>
-    <string name="notification_slider_top_position">Posición superior</string>
-    <string name="notification_slider_middle_position">Posición central</string>
-    <string name="notification_slider_bottom_position">Posición inferior</string>
-    <string name="notification_slider_mode_total_silence">Silencio total</string>
-    <string name="notification_slider_mode_priority_only">Solo prioridad</string>
-    <string name="notification_slider_mode_silent">Silencioso</string>
-    <string name="notification_slider_mode_vibrate">Vibrar</string>
-    <string name="notification_slider_mode_none">Normal</string>
-    <string name="buttons_dashboard_summary">Ajustes de la alerta deslizante</string>
-    <!-- Vibration slider -->
-    <string name="category_vibrator">Vibrador</string>
-    <string name="vib_strength_title_head">Intensidad</string>
-    <string name="vib_strength_summary_head">Definir la intensidad de la vibración</string>
-    <string name="vibration_warning">Establecer una configuración demasiado alta puede causar daños permanentes en el hardware.</string>
 </resources>

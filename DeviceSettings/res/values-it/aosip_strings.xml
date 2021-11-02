@@ -11,28 +11,17 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Panel modes -->
+    <!-- Display settings -->
     <string name="device_title">Impostazioni OnePlus</string>
     <string name="device_summary">Correggi impostazioni dispositivo specifico OnePlus</string>
     <string name="display_title">Schermo</string>
-    <string name="srgb_mode_summary"></string>
-    <string name="srgb_mode_title">modalità sRGB</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Modalità alta luminosità</string>
-    <string name="wide_color_mode_title">Modalità Colore ampio</string>
-    <string name="dci_mode_summary"></string>
-    <string name="dci_mode_title">DCI-P3 modalità con ampia gamma di colori</string>
-    <string name="Night_mode_summary"></string>
-    <string name="Night_mode_title">Modalità notte</string>
-    <string name="panel_category_title">Modalità display</string>
-    <string name="panel_category_summary">Modalità di correzione dei colori del display</string>
-    <string name="off_mode_title">Spento</string>
-    <string name="tile_panel_mode">Modalità display</string>
     <string name="dc_mode_summary"></string>
     <string name="dc_mode_title">Modalità anti-sfarfallio</string>
     <string name="tile_hbm_mode">Modalità alta luminosità</string>
     <string name="tile_dc_mode">Anti-sfarfallio</string>
-    <!-- Screen off Gestures : Input -->
+    <!-- Screen off Gestures - Input -->
     <string name="touchscreen_gesture_settings_title">Gesture sullo schermo</string>
     <string name="touchscreen_gesture_settings_summary">Esegui varie gesture per delle azioni rapide</string>
     <string name="touchscreen_gestures_haptic_feedback_title">Feedback aptico</string>
@@ -56,7 +45,7 @@
     <string name="touchscreen_gesture_letter_v_title">Disegna la lettera \"V\"</string>
     <string name="touchscreen_gesture_letter_w_title">Disegna la lettera \"W\"</string>
     <string name="touchscreen_gesture_letter_z_title">Disegna la lettera \"Z\"</string>
-    <!-- Screen off Gestures : Actions -->
+    <!-- Screen off Gestures - Actions -->
     <string name="touchscreen_gesture_action_dialog_title">Azione gesture</string>
     <string name="touchscreen_gesture_action_do_nothing">Non fare niente</string>
     <string name="touchscreen_gesture_action_flashlight">Attiva/disattiva torcia</string>
@@ -71,32 +60,4 @@
     <string name="touchscreen_gesture_action_volume_down">Abbassa l\'audio multimediale</string>
     <string name="touchscreen_gesture_action_volume_up">Aumenta l\'audio multimediale</string>
     <string name="touchscreen_gesture_action_ambient_display">Mostra l\'Ambient Display</string>
-    <!-- Refresh rate -->
-    <string name="refresh_title">Aggiornamento dello schermo</string>
-    <string name="tile_refresh_rate">Frequenza di aggiornamento dello schermo</string>
-    <string name="auto_refresh_rate_summary">Lascia che sia l\'applicazione a scegliere la frequenza di aggiornamento dello schermo da utilizzare</string>
-    <string name="auto_refresh_rate_title">Frequenza di aggiornamento automatica</string>
-    <string name="refresh_rate_summary">Scegli fra 60hz e 90hz come frequenza di aggiornamento massima</string>
-    <string name="refresh_rate_title">Forza la frequenza di aggiornamento a 90hz</string>
-    <string name="refresh_rate_warning">Forzando la frequenza di aggiornamento a 90hz verrà notevolmente impattata la durata della batteria</string>
-    <string name="fps_info_title">FPS sullo schermo</string>
-    <string name="fps_info_summary">Mostra sullo schermo i tuoi FPS </string>
-    <string name="panel_mode_info">Disabilitare la modalità colore necessita un riavvio</string>
-    <!-- Notification slider -->
-    <string name="notification_slider_category_title">Cursore delle notifiche</string>
-    <string name="notification_slider_selection_dialog_title">Azione</string>
-    <string name="notification_slider_top_position">Posizione superiore</string>
-    <string name="notification_slider_middle_position">Posizione centrale</string>
-    <string name="notification_slider_bottom_position">Posizione inferiore</string>
-    <string name="notification_slider_mode_total_silence">Silenzio totale</string>
-    <string name="notification_slider_mode_priority_only">Solo con priorità</string>
-    <string name="notification_slider_mode_silent">Silenzioso</string>
-    <string name="notification_slider_mode_vibrate">Vibrazione</string>
-    <string name="notification_slider_mode_none">Normale</string>
-    <string name="buttons_dashboard_summary">Impostazioni degli avvisi del cursore</string>
-    <!-- Vibration slider -->
-    <string name="category_vibrator">Vibrazione</string>
-    <string name="vib_strength_title_head">Intensità</string>
-    <string name="vib_strength_summary_head">Imposta l\'intensità della vibrazione</string>
-    <string name="vibration_warning">L\'aumento eccessivo dell\'intensità della vibrazione potrebbe causare danni permanenti all\'hardware</string>
 </resources>
