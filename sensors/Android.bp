@@ -62,6 +62,7 @@ cc_binary {
     ],
     shared_libs: [
         "libbase",
+        "libbinder",
         "libgui",
         "libui",
         "libutils",
