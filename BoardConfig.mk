@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/guacamole
 TARGET_KERNEL_BUILD_HOST := kosp
 TARGET_KERNEL_BUILD_USER := "Zlatan Radovanovic"
 
+# Compression
+PRODUCT_FS_COMPRESSION := 1
+
 # Display
 TARGET_SCREEN_DENSITY := 560
 
