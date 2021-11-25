@@ -22,6 +22,7 @@
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
 
+#include <fstream>
 #include <inttypes.h>
 #include <unistd.h>
 
@@ -31,6 +32,21 @@
 #define OP_FINISH_FP_ENROLL 10
 #define OP_DISPLAY_NOTIFY_PRESS 9
 #define OP_DISPLAY_SET_DIM 10
+
+#define POWER_STATUS_PATH "/sys/class/drm/card0-DSI-1/power_status"
+
+namespace {
+
+/*
+ * Write value to path and close file.
+ */
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+} // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -78,7 +94,6 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 1);
 
     return Void();
@@ -180,6 +195,8 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
 }
 
 Return<uint64_t> BiometricsFingerprint::preEnroll()  {
+    set(POWER_STATUS_PATH, 1);
+
     return mDevice->pre_enroll(mDevice);
 }
 
@@ -238,6 +255,7 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
         uint32_t gid) {
+    set(POWER_STATUS_PATH, 1);
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
 
