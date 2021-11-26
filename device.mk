@@ -25,6 +25,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+#RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
