@@ -15,9 +15,9 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package com.aosip.device.DeviceSettings;
+package com.aosip.device.DeviceSettings.ModeSwitch;
 
-import android.content.Context;
+import com.aosip.device.DeviceSettings.Utils;
 
 public class HBMModeSwitch {
 
@@ -34,7 +34,7 @@ public class HBMModeSwitch {
         return Utils.fileWritable(getFile());
     }
 
-    public static boolean isCurrentlyEnabled(Context context) {
+    public static boolean isCurrentlyEnabled() {
         return Utils.getFileValueAsBoolean(getFile(), false);
     }
 }

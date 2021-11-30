@@ -24,7 +24,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.IBinder;
 
-import com.aosip.device.DeviceSettings.HBMModeSwitch;
+import com.aosip.device.DeviceSettings.ModeSwitch.HBMModeSwitch;
 
 public class HBMModeService extends Service {
 

@@ -24,34 +24,21 @@ import android.content.SharedPreferences;
 import android.provider.Settings;
 import androidx.preference.PreferenceManager;
 
-import com.aosip.device.DeviceSettings.TouchscreenGestureSettings;
+import com.aosip.device.DeviceSettings.ModeSwitch.*;
 
 public class Startup extends BroadcastReceiver {
 
     private void restore(String file, boolean enabled) {
-        if (file == null) {
-            return;
-        }
-        if (enabled) {
-            Utils.writeValue(file, "1");
-        }
-    }
-
-    private void restore(String file, String value) {
-        if (file == null) {
-            return;
-        }
-        Utils.writeValue(file, value);
+        if (file == null) return;
+        if (enabled) Utils.writeValue(file, "1");
     }
 
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
-        boolean enabled = false;
         TouchscreenGestureSettings.MainSettingsFragment.restoreTouchscreenGestureStates(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false);
-        if (enabled) {
-            restore(DCModeSwitch.getFile(), enabled);
-        }
+
+        restore(DCModeSwitch.getFile(),
+                sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false));
     }
 }
