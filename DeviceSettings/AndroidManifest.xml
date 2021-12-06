@@ -22,13 +22,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
     <protected-broadcast android:name="com.aosip.device.DeviceSettings.UPDATE_SETTINGS" />
-
-    <uses-sdk
-        android:minSdkVersion="28"
-        android:targetSdkVersion="29" />
 
     <application
         android:icon="@drawable/ic_settings_device"
@@ -38,7 +33,8 @@
         <!-- Device Settings -->
         <activity
             android:name=".DeviceSettingsActivity"
-            android:label="@string/device_title">
+            android:label="@string/device_title"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
             </intent-filter>
@@ -64,7 +60,8 @@
             android:theme="@style/Theme.SubSettingsBase">
         </activity>
 
-        <receiver android:name="com.aosip.device.DeviceSettings.Startup" >
+        <receiver android:name="com.aosip.device.DeviceSettings.Startup"
+                  android:exported="false">
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -75,7 +72,8 @@
             android:name="com.aosip.device.DeviceSettings.DCModeTileService"
             android:icon="@drawable/ic_dimming_off"
             android:label="@string/tile_dc_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
             <intent-filter>
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
@@ -85,7 +83,8 @@
             android:name="com.aosip.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
+            android:exported="true">
             <intent-filter>
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
