@@ -373,9 +373,9 @@ vendor/lib64/libsdmextension.so
 vendor/lib64/libtinyxml2_1.so
 
 # Display calibration data
-vendor/etc/qdcm_calib_data_samsung_dsc_cmd_mode_oneplus_dsi_panel.xml
-vendor/etc/qdcm_calib_data_samsung_s6e3fc2x01_cmd_mode_dsi_panel.xml
-vendor/etc/qdcm_calib_data_samsung_sofef03f_m_fhd_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/qdcm_calib_data_samsung_dsc_cmd_mode_oneplus_dsi_panel.xml|2d14ae9d54167ec5153030071e38b1b156985d96
+vendor/etc/qdcm_calib_data_samsung_s6e3fc2x01_cmd_mode_dsi_panel.xml|619e2d9b53f3d8cad232aeeecbe3f0ceb73b0d0e
+vendor/etc/qdcm_calib_data_samsung_sofef03f_m_fhd_cmd_mode_dsc_dsi_panel.xml|ac4d2ce347a53d9a54cb384d0b320e56ed2b9014
 
 # Display postprocessing
 vendor/bin/hw/vendor.display.color@1.0-service
