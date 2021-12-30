@@ -11,11 +11,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from guacamole device
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
-# Inherit some common krypton stuff.
-$(call inherit-product, vendor/krypton/configs/KryptonCommon.mk)
+# Inherit some common Evolution stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := krypton_guacamole
+PRODUCT_NAME := evolution_guacamole
 PRODUCT_DEVICE := guacamole
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus 7 Pro
@@ -25,8 +25,9 @@ PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# OOS Gallery
-TARGET_SHIPS_OOSGALLERY := false
+# Evolution Stuff
+DEVICE_MAINTAINER := MHMDeveloper
+EVO_BUILD_TYPE := SPECIAL
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
