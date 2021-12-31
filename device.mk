@@ -31,7 +31,11 @@ PRODUCT_PACKAGES += \
 
 # Mark as official build
 OFFICIAL_BUILD := true
-    
+
+#RemovePackage
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Wifi Overlay
 PRODUCT_PACKAGES += \
     OnePlus7ProWifiOverlay
