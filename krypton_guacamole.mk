@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
 # Inherit some common krypton stuff.
-$(call inherit-product, vendor/krypton/configs/KryptonCommon.mk)
+$(call inherit-product, vendor/krypton/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := krypton_guacamole
