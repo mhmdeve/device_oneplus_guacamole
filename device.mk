@@ -394,6 +394,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     oneplus-fwk.oneplus_msmnile
 
+# OnePlus Apps
+PRODUCT_PACKAGES += \
+    OnePlusCameraOverlay \
+    OnePlusGalleryOverlay
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
