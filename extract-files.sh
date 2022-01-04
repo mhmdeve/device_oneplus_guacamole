@@ -63,9 +63,6 @@ function blob_fixup() {
                 echo "sensors.oneplus.so" >> "$shim"
             done
             ;;
-        vendor/bin/hw/qcrild)
-            "${PATCHELF}" --add-needed libril_shim.so "${2}"
-            ;;
         vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_ac4dec.so | \
         vendor/lib/libstagefrightdolby.so | vendor/lib64/libstagefright_soft_ddpdec.so | \
         vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
