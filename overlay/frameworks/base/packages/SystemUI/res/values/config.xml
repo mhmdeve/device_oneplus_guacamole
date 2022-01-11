@@ -32,4 +32,7 @@
 
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">120</integer>
+
+    <!-- Offset for alert slider dialog from status bar -->
+    <integer name="config_alertSliderOffset">800</integer>
 </resources>
