@@ -37,7 +37,7 @@ public class Startup extends BroadcastReceiver {
     public void onReceive(final Context context, final Intent bootintent) {
         TouchscreenGestureFragment.restoreTouchscreenGestureStates(context);
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-
+        VibratorStrengthPreference.restore(context);
         restore(DCModeSwitch.getFile(),
                 sharedPrefs.getBoolean(DeviceSettings.KEY_DC_SWITCH, false));
     }

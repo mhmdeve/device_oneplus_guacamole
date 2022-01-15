@@ -79,3 +79,6 @@
 /sys/devices/virtual/diag/diag/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/misc/(msm_aac|msm_alac|msm_amrnb|msm_amrwb|msm_amrwbplus|msm_ape|msm_evrc|msm_g711alaw|msm_g711mlaw|msm_mp3|msm_multi_aac|msm_qcelp|msm_wma|msm_wmapro)/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
 /sys/devices/virtual/wakeup/wakeup[0-9]+(/.*)? u:object_r:sysfs_wakeup:s0
+
+# Vibrator
+/sys/devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator/level u:object_r:sysfs_vibrator:s0

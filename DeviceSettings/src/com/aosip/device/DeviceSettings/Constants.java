@@ -40,4 +40,8 @@ public class Constants {
     static final String UPDATE_EXTRA_KEYCODE_MAPPING = "keycode_mappings";
     // Broadcast extra: assigned actions (int[]: key = gesture ID, value = action)
     static final String UPDATE_EXTRA_ACTION_MAPPING = "action_mappings";
+
+    // Vibrations
+    static final String KEY_VIBSTRENGTH = "vib_strength";
+    static final String KEY_SETTINGS_PREFIX = "device_setting_";
 }
