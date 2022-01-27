@@ -13,7 +13,7 @@
 <resources>
     <!-- Display settings -->
     <string name="device_title">OnePlus 設定</string>
-    <string name="device_summary">OnePlus 専用の端末設定を調整する</string>
+    <string name="device_summary"></string>
     <string name="display_title">ディスプレイ</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">高輝度モード</string>

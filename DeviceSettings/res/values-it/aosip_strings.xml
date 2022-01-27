@@ -13,7 +13,7 @@
 <resources>
     <!-- Display settings -->
     <string name="device_title">Impostazioni OnePlus</string>
-    <string name="device_summary">Correggi impostazioni dispositivo specifico OnePlus</string>
+    <string name="device_summary"></string>
     <string name="display_title">Schermo</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Modalità alta luminosità</string>

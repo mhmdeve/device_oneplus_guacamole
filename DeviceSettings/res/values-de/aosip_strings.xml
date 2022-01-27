@@ -13,7 +13,7 @@
 <resources>
     <!-- Display settings -->
     <string name="device_title">OnePlus Einstellungen</string>
-    <string name="device_summary">Stelle OnePlus spezifische Handyeinstellungen ein</string>
+    <string name="device_summary"></string>
     <string name="display_title">Display</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Hoher Helligkeit Modus</string>

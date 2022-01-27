@@ -13,7 +13,7 @@
 <resources>
     <!-- Display settings -->
     <string name="device_title">Paramètres OnePlus</string>
-    <string name="device_summary">Ajuster les réglages spécifiques One Plus</string>
+    <string name="device_summary"></string>
     <string name="display_title">Afficher</string>
     <string name="hbm_mode_summary"></string>
     <string name="hbm_mode_title">Mode haute luminosité</string>
