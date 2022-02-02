@@ -31,6 +31,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Device maintainer
 DEVICE_MAINTAINER := alk3p
 
+# Custom Stuff
+TARGET_SUPPORTS_QUICK_TAP  := true
+
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
