@@ -60,6 +60,8 @@
     <string-array name="config_appLockAllowedSystemApps" translatable="false">
         <!-- Graphene os camera -->
         <item>app.grapheneos.camera</item>
+        <!-- Files -->
+        <item>com.android.documentsui</item>
         <!-- Play store -->
         <item>com.android.vending</item>
         <!-- Gallery go -->
