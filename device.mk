@@ -443,6 +443,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# SoC
+PROCESSOR_MODEL := SM8150
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
