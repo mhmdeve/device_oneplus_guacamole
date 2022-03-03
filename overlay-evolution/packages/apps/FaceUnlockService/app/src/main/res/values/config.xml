@@ -16,4 +16,5 @@
 -->
 <resources>
     <integer name="cam_open_delay_ms">500</integer>
+    <integer name="override_front_cam_id">1</integer>
 </resources>
