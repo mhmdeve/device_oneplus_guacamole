@@ -13,7 +13,7 @@
 // limitations under the License.
 
 runtime_resource_overlay {
-    name: "AOSPAOnePlus7ProSettings",
+    name: "OnePlus7ProSettings",
     sdk_version: "current",
-    system_ext_specific: true,
+    device_specific: true,
 }
