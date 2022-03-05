@@ -47,4 +47,10 @@
     <dimen name="tri_state_up_dialog_position_l">650.0px</dimen>
     <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
     <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
+
+    <!-- Absolute distance of the top position of alert slider from the top of the display -->
+    <integer name="alert_slider_top_y">757</integer>
+
+    <!-- Absolute width of the alert slider -->
+    <integer name="alertslider_width">222</integer>
 </resources>
