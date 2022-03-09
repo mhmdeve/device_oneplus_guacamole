@@ -56,6 +56,7 @@
         <!--AW VIBRATOR END-->
         <library name="dap" path="libswdap.so"/>
 	<!-- END-->
+        <library name="haptic_generator" path="libhapticgenerator.so"/>
     </libraries>
     <effects>
         <effect name="vqe" library="vqe" uuid="64a0f614-7fa4-48b8-b081-d59dc954616f"/>
@@ -120,6 +121,7 @@
         <!--AW VIBRATOR END-->
         <effect name="dap" library="dap" uuid="9d4921da-8225-4f29-aefa-39537a04bcaa"/>
 	<!-- END-->
+        <effect name="haptic_generator" library="haptic_generator" uuid="97c4acd1-8b82-4f2f-832e-c2fe5d7a9931"/>
     </effects>
     <postprocess>
         <stream type="music">
