@@ -1,9 +1,5 @@
 [
   {
-    "repository": "android_device_oneplus_extras",
-    "target_path": "device/oneplus/extras"
-  },
-  {
     "repository": "android_kernel_oneplus_sm8150",
     "target_path": "kernel/oneplus/sm8150"
   },
