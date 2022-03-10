@@ -271,4 +271,7 @@
 
     <!-- To show UDFPS Settings inside Pixelizer -->
     <bool name="config_haveUDFPS">true</bool>
+
+    <!-- Screen off UDFPS -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
