@@ -268,4 +268,7 @@
 
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
+
+    <!-- To show UDFPS Settings inside Pixelizer -->
+    <bool name="config_haveUDFPS">true</bool>
 </resources>
