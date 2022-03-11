@@ -16,4 +16,8 @@
 <resources>
         <!-- Whether to show min/max refresh rate in display settings -->
     <bool name="config_show_refresh_rate_controls">true</bool>
+
+    <!-- To show UDFPS Settings inside Pixelizer
+	Default value is off. -->
+    <bool name="config_haveUDFPS">true</bool>
 </resources>
