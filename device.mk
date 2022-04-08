@@ -32,6 +32,9 @@ PRODUCT_PACKAGES += \
 # Mark as official build
 OFFICIAL_BUILD := true
 
+# OnePlus apps
+$(call inherit-product, vendor/oneplus/apps/guacamole/config.mk)
+
 #RemovePackage
 PRODUCT_PACKAGES += \
     RemovePackages
