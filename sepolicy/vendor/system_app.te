@@ -8,3 +8,6 @@ allow system_app sysfs_leds:dir { search };
 allow system_app sysfs_oem:file { read write getattr open };
 binder_call(system_app, hal_cameraHIDL_default)
 get_prop(system_app, deviceid_prop)
+
+# Zram Access
+allow system_app sysfs_zram:dir { search };
