@@ -60,14 +60,9 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
-persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 ro.vendor.camera.res.fmq.size=1048576
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
-persist.camera.eis.enable=1
-persist.camera.is_mode=4
-persist.vendor.camera.oissr.debug=1
-vendor.debug.camera.eisv2enable=1
-vendor.debug.camera.eisv3enable=1
+persist.camera.assert.panic=true
+ro.opcamera.support=true
 
 # Crypto
 ro.crypto.allow_encrypt_override=true
@@ -142,16 +137,16 @@ persist.dbg.wfc_avail_ovr=1
 # Keystore
 ro.hardware.keystore_desede=true
 
-<<<<<<< HEAD
-=======
 # Media
 debug.stagefright.omx_default_rank=0
 mm.enable.smoothstreaming=true
 
->>>>>>> bfc4107 (sm8150-common: overlay: Reduce pop up cam delay on face unlock)
 # NFC
 ro.camera.notify_nfc=1
 ro.hardware.nfc_nci=nqx.default
+
+# OnePlus
+vendor.product.manufacturer=OPD
 
 # PASR
 vendor.pasr.activemode.enabled=true
