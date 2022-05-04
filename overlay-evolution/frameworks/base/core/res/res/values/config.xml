@@ -40,4 +40,7 @@
         <item>com.google.android.gms/com.google.android.gms.nearby.discovery.service.DiscoveryService</item>
         <item>com.google.android.gms/com.google.android.gms.nearby.messages.service.NearbyMessagesService</item>
     </string-array>
+
+    <!-- Whether device has warp charging support -->
+    <bool name="config_hasWarpCharger">true</bool>
 </resources>
