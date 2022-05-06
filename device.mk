@@ -451,7 +451,7 @@ PRODUCT_PACKAGES += \
 
 # tri-state key
 PRODUCT_PACKAGES += \
-    tri-state-key_daemon.vendor
+    tri-state-key_daemon
 
 # Update engine
 PRODUCT_PACKAGES += \
