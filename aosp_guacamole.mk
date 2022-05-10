@@ -15,10 +15,7 @@ $(call inherit-product, device/oneplus/guacamole/device.mk)
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Moto Dolby
-$(call inherit-product, vendor/oneplus/dolby/dolby-vendor.mk)
-
-# GoogleCamera
-$(call inherit-product, vendor/GoogleCamera/config.mk)
+$(call inherit-product, vendor/motorola/dolby/dolby-vendor.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := aosp_guacamole
