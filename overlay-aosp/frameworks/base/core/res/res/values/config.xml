@@ -34,4 +34,7 @@
         <!-- Via browser. -->
         <item>mark.via.gp</item>
     </string-array>
+
+    <!-- Scfeen Off UDFPS -->
+    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
