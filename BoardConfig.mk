@@ -9,8 +9,8 @@ BOARD_VENDOR := oneplus
 DEVICE_PATH := device/oneplus/guacamole
 
 # Kernel
-TARGET_KERNEL_BUILD_HOST := kosp
-TARGET_KERNEL_BUILD_USER := "Zlatan Radovanovic"
+TARGET_KERNEL_BUILD_HOST := ppui
+TARGET_KERNEL_BUILD_USER := "Master"
 
 # Compression
 PRODUCT_FS_COMPRESSION := 1
