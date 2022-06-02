@@ -36,6 +36,10 @@ OFFICIAL_BUILD := true
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
 
+#RemovePackages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Wifi Overlay
 PRODUCT_PACKAGES += \
     OnePlus7ProWifiOverlay
