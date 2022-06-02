@@ -12,4 +12,4 @@ export DEVICE=oneplus7pro
 export DEVICE_COMMON=sm8150-common
 export VENDOR=oneplus
 
-"./../../${VENDOR}/${DEVICE_COMMON}/setup-makefiles.sh" "$@"
+"./../../../${VENDOR}/${DEVICE_COMMON}/extract-utils/setup-makefiles.sh" "$@"
