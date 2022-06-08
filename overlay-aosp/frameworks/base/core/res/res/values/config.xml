@@ -37,6 +37,4 @@
 
     <!-- Scfeen Off UDFPS -->
     <bool name="config_supportScreenOffUdfps">true</bool>
-
-    <bool name="config_udfpsSupportsNewUi" translatable="false">true</bool>
 </resources>
