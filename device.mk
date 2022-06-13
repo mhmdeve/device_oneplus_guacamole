@@ -91,6 +91,10 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
+# ARCore
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.stock.build.fingerprint=OnePlus/OnePlus7Pro/OnePlus7Pro:11/RKQ1.201022.002/2205261816:user/release-keys
+
 # DeviceExtras
 PRODUCT_PACKAGES += \
     DeviceExtras
