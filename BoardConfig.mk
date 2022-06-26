@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/guacamole
 TARGET_KERNEL_BUILD_HOST := ppui
 TARGET_KERNEL_BUILD_USER := "Master"
 
+# UI Blur Support
+TARGET_ENABLE_BLUR := true
+
 # Compression
 PRODUCT_FS_COMPRESSION := 1
 
