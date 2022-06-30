@@ -29,7 +29,6 @@ $(call inherit-product, vendor/flamingo/target/product/flamingo.mk)
 PRODUCT_NAME := flamingo_oneplus7pro
 PRODUCT_DEVICE := oneplus7pro
 PRODUCT_BRAND := OnePlus
-PRODUCT_MODEL := GM1917
 PRODUCT_MANUFACTURER := OnePlus
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
