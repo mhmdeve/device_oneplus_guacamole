@@ -16,6 +16,9 @@ vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/lib/hw/audio.primary.msmnile.so
 vendor/lib64/hw/audio.primary.msmnile.so
 
+# Camera Firmware
+vendor/firmware/CAMERA_ICP.elf
+
 # Camera
 vendor/etc/camera/ashdr/iso617_4608x3456.ncf
 vendor/etc/camera/ashdr/ncf_pack.ncf
