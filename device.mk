@@ -9,15 +9,6 @@ $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/oneplus7pro/oneplus7pro-vendor.mk)
 
-# Overlays
-PRODUCT_PACKAGES += \
-    FlamingoOnePlus7ProFrameworks \
-    FlamingoOnePlus7ProSystemUI \
-    OnePlus7ProFrameworks \
-    OnePlus7ProSettings \
-    OnePlus7ProSettingsProvider \
-    OnePlus7ProSystemUI
-
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
@@ -28,6 +19,18 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     OnePlusCameraHelper
+
+# Mark as official build
+OFFICIAL_BUILD := true
+
+# Overlays
+PRODUCT_PACKAGES += \
+    FlamingoOnePlus7ProFrameworks \
+    FlamingoOnePlus7ProSystemUI \
+    OnePlus7ProFrameworks \
+    OnePlus7ProSettings \
+    OnePlus7ProSettingsProvider \
+    OnePlus7ProSystemUI
 
 # Stock fingerprint for ARCore
 PRODUCT_SYSTEM_PROPERTIES += \
