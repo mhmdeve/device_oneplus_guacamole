@@ -12,11 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from guacamole device
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
-# Inherit some common Arrow stuff.
-$(call inherit-product, vendor/arrow/config/common.mk)
+# Inherit some common Evolution stuff.
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+
+# GoogleCamera
+$(call inherit-product-if-exists vendor/GoogleCamera/config.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_guacamole
+PRODUCT_NAME := evolution_guacamole
 PRODUCT_DEVICE := guacamole
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := GM1917
@@ -28,9 +31,6 @@ PRODUCT_SYSTEM_DEVICE := OnePlus7Pro
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
-
-# Device maintainer
-DEVICE_MAINTAINER := alk3p
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
