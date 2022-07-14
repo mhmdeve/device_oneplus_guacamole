@@ -11,6 +11,13 @@ vendor.bluetooth.soc=cherokee
 persist.bluetooth.bqr.event_mask=0x8000000E
 persist.bluetooth.bqr.min_interval_ms=60000
 
+# Camera
+persist.camera.assert.panic=true
+persist.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+ro.opcamera.support=true
+vendor.camera.aux.packagelist=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+
 # Charger
 ro.charger.enable_suspend=true
 
@@ -49,6 +56,10 @@ ro.netflix.bsp_rev=Q855-16947-1
 
 # NFC
 ro.nfc.port=I2C
+
+# OnePlus
+ro.vendor.product.manufacturer.db=OP_PHONE
+ro.vendor.product.device.db=OP_DEVICE
 
 # Perf
 ro.vendor.qti.sys.fw.bg_apps_limit=60
