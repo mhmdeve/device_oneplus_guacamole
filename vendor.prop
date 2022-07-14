@@ -60,9 +60,7 @@ persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
-persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 ro.vendor.camera.res.fmq.size=1048576
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.factorymode,com.oneplus.camera,com.oneplus.healthcheck
 persist.camera.eis.enable=1
 persist.camera.is_mode=4
 persist.vendor.camera.oissr.debug=1
@@ -145,6 +143,9 @@ ro.hardware.keystore_desede=true
 # NFC
 ro.camera.notify_nfc=1
 ro.hardware.nfc_nci=nqx.default
+
+# OnePlus
+vendor.product.manufacturer=OPD
 
 # PASR
 vendor.pasr.activemode.enabled=true

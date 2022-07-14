@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/guacamole/device.mk)
 # Inherit some common PixelPlusUI stuff.
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
+# OnePlus apps
+$(call inherit-product-if-exists, vendor/oneplus/apps/apps-vendor.mk)
+
 # Moto Dolby
 $(call inherit-product, vendor/motorola/dolby/dolby-vendor.mk)
 

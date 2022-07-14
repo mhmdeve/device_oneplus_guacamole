@@ -177,14 +177,14 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
+    libcamera2ndk_vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libxml2 \
     OnePlusCameraHelper \
-    Snap \
     vendor.oneplus.hardware.camera@1.0.vendor:64 \
-    vendor.oneplus.camera.CameraHIDL@1.0.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor
+    vendor.oneplus.hardware.CameraMDMHIDL@1.0.vendor:64 \
+    vendor.qti.hardware.camera.device@1.0.vendor:64
 
 # Init scripts
 PRODUCT_PACKAGES += \
@@ -196,6 +196,7 @@ PRODUCT_PACKAGES += \
     init.oem.debug.rc \
     init.oem.rc \
     init.oem_ftm.rc \
+    init.opcamera.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
