@@ -1,3 +1,9 @@
+# Bluetooth
+bluetooth.hardware.power.idle_cur_ma=36
+bluetooth.hardware.power.operating_voltage_mv=3300
+bluetooth.hardware.power.rx_cur_ma=20
+bluetooth.hardware.power.tx_cur_ma=3
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
@@ -16,3 +22,4 @@ ro.com.baidu.input.pad_land_b=10
 
 # Elixir Stuff
 org.elixir.device=OnePlus 7 Pro
+
