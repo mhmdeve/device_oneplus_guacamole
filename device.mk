@@ -87,9 +87,9 @@ PRODUCT_PACKAGES += \
     AntHalService-Soong \
     com.dsi.ant@1.0.vendor
 
-# AOSiP Device Settings
+# DeviceExtras
 PRODUCT_PACKAGES += \
-    DeviceSettings
+    DeviceExtras
 
 # Atrace
 PRODUCT_PACKAGES += \
