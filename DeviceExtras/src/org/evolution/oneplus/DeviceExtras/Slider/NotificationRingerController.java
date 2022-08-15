@@ -115,7 +115,6 @@ public final class NotificationRingerController extends SliderControllerBase {
 
     @Override
     public void reset() {
-        mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
-        mNotificationManager.setZenMode(Settings.Global.ZEN_MODE_OFF, null, TAG);
     }
+
 }

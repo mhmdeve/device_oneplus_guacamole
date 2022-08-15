@@ -67,8 +67,7 @@ public final class BrightnessController extends SliderControllerBase {
 
     @Override
     public void reset() {
-        writeSettings(Settings.System.SCREEN_BRIGHTNESS_MODE,
-                Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC);
+
     }
 
     private boolean writeSettings(String key, int value) {

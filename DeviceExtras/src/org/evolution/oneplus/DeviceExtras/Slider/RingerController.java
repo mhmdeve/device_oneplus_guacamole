@@ -64,6 +64,6 @@ public final class RingerController extends SliderControllerBase {
 
     @Override
     public void reset() {
-        mAudioManager.setRingerModeInternal(AudioManager.RINGER_MODE_NORMAL);
+
     }
 }
