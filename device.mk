@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     OnePlus7ProFrameworks \
     OnePlus7ProSettings \
     OnePlus7ProSettingsProvider \
-    OnePlus7ProSystemUI
+    OnePlus7ProSystemUI \
+    AlertSliderOverlay
 
 # Stock fingerprint for ARCore
 PRODUCT_SYSTEM_PROPERTIES += \

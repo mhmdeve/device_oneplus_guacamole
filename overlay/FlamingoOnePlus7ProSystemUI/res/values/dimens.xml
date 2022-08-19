@@ -18,11 +18,4 @@
 <resources>
     <!-- Keyguard -->
     <dimen name="keyguard_indication_margin_bottom">30dp</dimen>
-
-    <!-- Absolute distance of the top position of alert slider from the top of the display -->
-    <integer name="alert_slider_top_y">757</integer>
-
-    <!-- Absolute width of the alert slider -->
-    <integer name="alertslider_width">222</integer>
-
 </resources>
