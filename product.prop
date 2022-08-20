@@ -17,3 +17,6 @@ ro.com.baidu.input.pad_land_b=10
 # Audio (Dolby)
 debug.stagefright.omx_default_rank.sw-audio=16
 ro.control_privapp_permissions=log
+
+# Elixir Stuff
+org.elixir.device=OnePlus 7 Pro
