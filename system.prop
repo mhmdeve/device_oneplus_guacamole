@@ -7,11 +7,6 @@ ro.audio.monitorRotation=true
 bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
 
-# Bluetooth
-persist.vendor.btstack.enable.lpa=true
-persist.vendor.btstack.enable.twsplus=true
-persist.vendor.bt.a2dp.aac_whitelist=false
-
 # Camera
 persist.camera.assert.panic=true
 persist.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
