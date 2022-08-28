@@ -1,11 +1,11 @@
 # Clone/Fetch Upstream Device Dependencies
 # Device Tree
 echo "Cloning OnePlus 7Pro Tree"
-git clone https://github.com/PixelPlusUI-devices/device_oneplus_guacamole -b snowcone-decommonized device/oneplus/guacamole
+git clone https://github.com/mhmdeve/device_oneplus_guacamole -b tiramisu device/oneplus/guacamole
 echo ""
 
 echo "Cloning Vendor blobs"
-git clone https://github.com/PixelPlusUI-devices/vendor_oneplus_guacamole -b snowcone-decommonized vendor/oneplus/guacamole
+git clone https://github.com/mhmdeve/vendor_oneplus_guacamole -b tiramisu vendor/oneplus/guacamole
 echo ""
 
 echo "Cloning kernel tree"
