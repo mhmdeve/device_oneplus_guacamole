@@ -1,10 +1,6 @@
 allow platform_app hal_ifaa_hwservice:hwservice_manager find;
 binder_call(platform_app, hal_ifaa_default)
 
-# Dolby
-allow platform_app hal_dms_hwservice:hwservice_manager find;
-allow platform_app hal_dms_default:binder { call transfer };
-
 r_dir_file(priv_app, vendor_sysfs_battery_supply) 
 allow priv_app vendor_sysfs_kgsl:file { read open getattr };
 allow priv_app hal_cameraHIDL_hwservice:hwservice_manager find;
