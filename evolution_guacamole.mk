@@ -17,9 +17,6 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # OnePlus apps
 $(call inherit-product-if-exists, vendor/oneplus/apps/apps-vendor.mk)
 
-# Moto Dolby
-$(call inherit-product, vendor/motorola/dolby/dolby-vendor.mk)
-
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_guacamole
 PRODUCT_DEVICE := guacamole
