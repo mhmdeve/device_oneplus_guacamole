@@ -23,7 +23,7 @@
     <bool name="config_deviceSupportsAlertSlider">false</bool>
 
     <!-- Whether device supports Dolby -->
-    <bool name="config_deviceSupportsDolby">false</bool>
+    <bool name="config_deviceSupportsDolby">true</bool>
 
     <!-- Whether device supports Panel Modes -->
     <bool name="config_deviceSupportsPanelModes">false</bool>
