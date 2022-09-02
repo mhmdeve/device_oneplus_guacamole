@@ -112,6 +112,8 @@
     </effects>
     <preprocess>
         <stream type="voice_communication">
+            <apply effect="aec"/>
+            <apply effect="ns"/>
         </stream>
     </preprocess>
 </audio_effects_conf>
