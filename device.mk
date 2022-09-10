@@ -481,6 +481,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     $(LOCAL_PATH)
 
+# Subsystem silent restart
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.ssr.restart_level=ALL_ENABLE
+    
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
