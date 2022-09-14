@@ -6,6 +6,10 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/oneplus/sm8150-common/common.mk)
 
+# Include our Qualcomm Board configuration.
+$(call inherit-product, device/qcom/common/BoardConfigQcom.mk)
+$(call inherit-product, device/qcom/common/common.mk)
+
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oneplus/oneplus7pro/oneplus7pro-vendor.mk)
 
@@ -20,8 +24,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     OnePlusCameraHelper
 
-# Mark as official build
-OFFICIAL_BUILD := true
+# Enable LLVM Support.
+
+# Kernel
+KERNEL_LLVM_SUPPORT := true
+TARGET_KERNEL_ARCH := arm64
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+TARGET_KERNEL_CROSS_COMPILE_PREFIX ?= $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX ?= $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 # Overlays
 PRODUCT_PACKAGES += \

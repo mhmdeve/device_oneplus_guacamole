@@ -1,1 +1,1 @@
-board=msmnile|OnePlus7Pro
+board=msmnile|OnePlus7Pro|guacamole
