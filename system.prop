@@ -8,8 +8,8 @@ bt.max.hfpclient.connections=1
 vendor.bluetooth.soc=cherokee
 
 # Bluetooth
-persist.vendor.bt.a2dp.aac_whitelist=false
-ro.bluetooth.library_name=libbluetooth_qti.so
+persist.bluetooth.bqr.event_mask=0x8000000E
+persist.bluetooth.bqr.min_interval_ms=60000
 
 # Charger
 ro.charger.enable_suspend=true
