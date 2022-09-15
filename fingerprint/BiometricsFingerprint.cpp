@@ -13,8 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro"
+
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.3-service.oneplus"
 
 #include <hardware/hw_auth_token.h>
 
@@ -95,6 +96,7 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
+    this->isCancelled = 0;
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1); // Fixme! workaround for in-app fod auth
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 1);
 
@@ -102,7 +104,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    this->isCancelled = 0;
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
@@ -190,7 +192,7 @@ Return<uint64_t> BiometricsFingerprint::setNotify(
         const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
     std::lock_guard<std::mutex> lock(mClientCallbackMutex);
     mClientCallback = clientCallback;
-    // This is here because HAL 2.1 doesn't have a way to propagate a
+    // This is here because HAL 2.3 doesn't have a way to propagate a
     // unique token for its driver. Subsequent versions should send a unique
     // token for each call to setNotify(). This is fine as long as there's only
     // one fingerprint device on the platform.
@@ -205,7 +207,6 @@ Return<uint64_t> BiometricsFingerprint::preEnroll()  {
 
 Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
         uint32_t gid, uint32_t timeoutSec) {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorFpService->updateStatus(OP_DISABLE_FP_LONGPRESS);
     mVendorFpService->updateStatus(OP_RESUME_FP_ENROLL);
 
@@ -215,7 +216,6 @@ Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorFpService->updateStatus(OP_FINISH_FP_ENROLL);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
 
@@ -279,11 +279,19 @@ IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     return sInstance;
 }
 
+const char* BiometricsFingerprint::getModuleId() {
+    int sensor_version = -1;
+    std::ifstream file("/sys/devices/platform/soc/soc:fingerprint_detect/sensor_version");
+    file >> sensor_version;
+    ALOGI("fp sensor version is: 0x%x", sensor_version);
+    return sensor_version == 0x9638 ? "goodix.g6.fod" : "goodix.fod";
+}
+
 fingerprint_device_t* BiometricsFingerprint::openHal() {
     int err;
     const hw_module_t *hw_mdl = nullptr;
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module("goodix.fod", &hw_mdl))) {
+    if (0 != (err = hw_get_module(getModuleId(), &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }
@@ -308,7 +316,7 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
     }
 
     if (kVersion != device->version) {
-        // enforce version on new devices because of HIDL@2.1 translation layer
+        // enforce version on new devices because of HIDL@2.3 translation layer
         ALOGE("Wrong fp version. Expected %d, got %d", kVersion, device->version);
         return nullptr;
     }
@@ -342,6 +350,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onError callback");
                 }
+                getInstance()->onFingerUp();
             }
             break;
         case FINGERPRINT_ACQUIRED: {

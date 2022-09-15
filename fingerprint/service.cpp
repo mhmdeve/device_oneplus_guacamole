@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service"
 
 #include <android/log.h>
 #include <hidl/HidlSupport.h>
@@ -32,6 +32,7 @@ using android::sp;
 int main() {
     android::sp<IBiometricsFingerprint> bio = BiometricsFingerprint::getInstance();
 
+    android::hardware::setMinSchedulerPolicy(bio, SCHED_RR, -20);
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     if (bio != nullptr) {
