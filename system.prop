@@ -65,6 +65,7 @@ ro.media.recorder-max-base-layer-fps=60
 mmp.enable.3g2=true
 media.aac_51_output_enabled=true
 persist.mm.enable.prefetch=true
+debug.stagefright.ccodec=1
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_age=5000
