@@ -511,7 +511,7 @@ vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 
-# Graphics (Adreno) - from OOSOB2
+# Graphics (Adreno) - from Oxygen OS 12
 -vendor/app/com.qualcomm.qti.gpudrivers.msmnile.api30/com.qualcomm.qti.gpudrivers.msmnile.api30.apk;PRESIGNED|48806ee3413a591ab35a262b3c0f88fd8ea85fbf
 vendor/lib/egl/eglSubDriverAndroid.so|70f2c481e24a42c9e899719a7de11fc45f31eb80
 vendor/lib/egl/libEGL_adreno.so|a1ebde8802bddd24745983dbd5a81a520afaf5c3
@@ -548,17 +548,17 @@ vendor/lib64/libgsl.so|08ab2d2ed9422bbef30ead294dc906395e588aa8
 vendor/lib64/libllvm-glnext.so|2e4abc8456b8c264cd09ccb12b2e218d719c5aa8
 vendor/lib64/libllvm-qcom.so|c8ca11ca22c091ceef665889eb4525c2d8044505
 
-# Graphics (Adreno firmware)
+# Graphics (Adreno firmware) - from Oxygen OS 12
 vendor/firmware/a630_gmu.bin|32bb4acc7767c47ddb487ed7cb998d465ee462f2
 vendor/firmware/a630_sqe.fw|e25094f97b44244775cc38a9d909fba6bd4cf76b
 vendor/firmware/a640_gmu.bin|fb1eab0dd5f313abf31441e2209c9398da7df98b
 vendor/firmware/a640_zap.b00|7afc31984d7eeacdd0fc78118ad8fa46c9b3e4ee
-vendor/firmware/a640_zap.b01|b8fcc2c952c039056bd89763dd0a4a4f1a75c8c8
+vendor/firmware/a640_zap.b01|35777712bfacf4614a5fc10134842da19ae94174
 vendor/firmware/a640_zap.b02|27d26ca0ae982c065fb7ab58be73bf3ca2e8bdf3
-vendor/firmware/a640_zap.elf|08aef3968ebbd6905f08c8c552a353711697059c
-vendor/firmware/a640_zap.mdt|77ac1b014f0cd458b85bf21874cafc0484f33760
+vendor/firmware/a640_zap.elf|c73cb2a2835b58b324a2decda01b9f55aaed8b85
+vendor/firmware/a640_zap.mdt|c763e4504c3400e3c86affed100f557a7986edd6
 
-# Graphics (Vulkan)
+# Graphics (Vulkan) - from Oxygen OS 12
 vendor/lib/hw/vulkan.adreno.so|6a2d4bc4185b7e87b7d42d6e43de051d38789647
 vendor/lib64/hw/vulkan.adreno.so|0176756e38472915e996a52c9c0c143e74564d49
 
