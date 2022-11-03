@@ -15,4 +15,5 @@ echo ""
 # OnePlus Stuff 
 echo "Cloning OnePlus"
 git clone https://gitlab.com/PixelPlusUI-SnowCone/vendor_oneplus_apps vendor/oneplus/apps
+git clone https://github.com/Evolution-X-Devices/vendor_ih8sn vendor/ih8sn
 echo ""
