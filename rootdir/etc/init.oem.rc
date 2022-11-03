@@ -1005,3 +1005,8 @@ on property:persist.vendor.oem.dump=0
 
 on property:persist.vendor.oem.dump=1
     setprop persist.vendor.zwriteback.backup 1
+
+on property:sys.boot_completed=1
+    # Restrict permissions to socket file
+    # to hide Magisk & co.
+    chmod 440 /proc/net/unix
