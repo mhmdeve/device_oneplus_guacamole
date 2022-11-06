@@ -651,6 +651,13 @@
         <item>"/system_ext/priv-app/daxService/daxService.apk"</item>
     </string-array>
 
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
+        <item>org.telegram.messenger</item>
+        <item>org.thunderdog.challegram</item>
+        <item>us.zoom.videomeetings</item>
+    </string-array>
+    
     <!-- Should the pinner service pin the Camera application? -->
     <bool name="config_pinnerCameraApp">true</bool>
 
