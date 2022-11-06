@@ -49,4 +49,12 @@
         <item>org.thunderdog.challegram</item>
         <item>us.zoom.videomeetings</item>
     </string-array>
+
+    <!-- The list of package IDs that are not allowed to use aux cameras. -->
+    <string-array name="config_cameraAuxPackageAllowList" translatable="false">
+        <item>com.oneplus.factorymode</item>
+        <item>com.oneplus.camera</item>
+        <item>com.oneplus.healthcheck</item>
+        <item>com.oem.autotest</item>
+    </string-array>
 </resources>
