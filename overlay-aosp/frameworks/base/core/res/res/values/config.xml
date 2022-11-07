@@ -56,5 +56,6 @@
         <item>com.oneplus.camera</item>
         <item>com.oneplus.healthcheck</item>
         <item>com.oem.autotest</item>
+        <item>org.pixelexperience.faceunlock</item>
     </string-array>
 </resources>
