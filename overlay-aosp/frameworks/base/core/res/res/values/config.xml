@@ -58,4 +58,7 @@
         <item>com.oem.autotest</item>
         <item>org.pixelexperience.faceunlock</item>
     </string-array>
+
+    <!-- Whether Device Support UDFPS or Not -->
+    <bool name="config_supportUdfps">true</bool>
 </resources>
