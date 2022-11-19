@@ -16,6 +16,9 @@ persist.camera.assert.panic=true
 persist.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
 ro.opcamera.support=true
 
+# Camera
+persist.vendor.camera.sceneclassify.enable=0
+
 # Charger
 ro.charger.enable_suspend=true
 
