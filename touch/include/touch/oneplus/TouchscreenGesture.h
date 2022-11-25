@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The LineageOS Project
+ * Copyright (C) 2019-2022 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
-#define VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
+#pragma once
 
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
@@ -39,13 +38,11 @@ class TouchscreenGesture : public ITouchscreenGesture {
     Return<bool> setGestureEnabled(const ::vendor::lineage::touch::V1_0::Gesture& gesture,
                                    bool enabled) override;
 
-  private:
     typedef struct {
         int32_t keycode;
         const char* name;
         const char* path;
     } GestureInfo;
-    static const std::map<int32_t, GestureInfo> kGestureInfoMap;  // id -> info
 };
 
 }  // namespace implementation
@@ -53,5 +50,3 @@ class TouchscreenGesture : public ITouchscreenGesture {
 }  // namespace touch
 }  // namespace lineage
 }  // namespace vendor
-
-#endif  // VENDOR_LINEAGE_TOUCH_V1_0_TOUCHSCREENGESTURE_H
