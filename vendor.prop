@@ -19,8 +19,6 @@ ro.vendor.audio.sdk.fluencetype=fluence
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.adm.buffering.ms=2
 vendor.audio.cts.media=false
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.enable.mirrorlink=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.output.suspend.supported=true
@@ -111,6 +109,12 @@ ro.hardware.hwcomposer=oneplus_sm8150
 persist.vendor.display.hal_srgb_mode=native_srgb
 persist.vendor.display.hal_display_p3_mode=native_p3
 persist.vendor.display.hal_saturated_mode=native_p3
+
+# Dolby
+persist.vendor.audio_fx.current=dolby
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=true
+ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
 
 # DPM
 persist.vendor.dpmhalservice.enable=1
