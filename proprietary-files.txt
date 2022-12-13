@@ -1313,7 +1313,6 @@ vendor/lib64/libwvhidl.so
 vendor/bin/cnss-daemon
 
 # WiFi Display (system) - from lemonadep - SKQ1.210821.001
--system/framework/WfdCommon.jar|9f431b56d7f38c71089333008695dd5f717e5034
 system_ext/bin/wfdservice|2d9bde189325b3faf4e1571543867c6a7e00762d
 system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
 system_ext/etc/seccomp_policy/wfdservice.policy|37994de64d6bd127898bd556cd614db459fe07ec
@@ -1355,7 +1354,6 @@ system_ext/lib64/libwfduibcsink.so|ba8d0e93566359220c801166e098077db2bc7530
 system_ext/lib64/libwfduibcsinkinterface.so|5625c6182ce0d154698b726f868f299bf736ee97
 system_ext/lib64/libwfduibcsrc.so|03e2b139fb399aa5beb1caaa4df0f5c7eb675a9d
 system_ext/lib64/libwfduibcsrcinterface.so|aef1b83ef458c79cd345031654d38bc8897c94ae
--system_ext/priv-app/WfdService/WfdService.apk|381e93aaa1943526cbeb9957656b5a0622b589d6
 
 # WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice
