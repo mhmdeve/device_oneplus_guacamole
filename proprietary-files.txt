@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus 7 Pro Global and India (11.0.9.1.GM21AA)
+# All unpinned blobs below are extracted from OnePlus7ProOxygen_21.P.45_OTA_0450 (11.0.9.1)
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -379,7 +379,7 @@ vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede025
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e70fda0288c646d0daf0ed0eef2f21855dd8d024
 
 # Dolby
--system_ext/priv-app/DaxUI/DaxUI.apk|6f3bc144613dd26d94c13bf6fce1746619d3daa9
+-system_ext/priv-app/DaxUI/DaxUI.apk|d735861d681ae7c37d021a328fa19acb
 -system_ext/priv-app/daxService/daxService.apk|ec7da3a4b973c070a37d58b840e21983b0cf9933
 system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec1273befed
 system_ext/etc/permissions/privapp-com.dolby.daxappui.xml|b783016728b17eadfcdad662ccaf546afbeab856
