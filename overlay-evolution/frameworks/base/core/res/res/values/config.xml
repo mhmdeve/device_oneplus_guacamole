@@ -70,6 +70,7 @@
         <item>com.oneplus.camera</item>
         <item>com.google.android.GoogleCamera</item>
         <item>com.google.android.apps.cameralite</item>
+        <item>com.google.android.GoogleCameraEng</item>
         <item>org.codeaurora.snapcam</item>
         <item>org.lineageos.aperture</item>
         <item>org.lineageos.aperture.dev</item>
