@@ -35,4 +35,7 @@
 
     <!-- Offset for alert slider dialog from status bar -->
     <integer name="config_alertSliderOffset">800</integer>
+
+    <!-- Update battery info every second when device is charging -->
+    <bool name="config_alternateFastchargeInfoUpdate">true</bool>
 </resources>
