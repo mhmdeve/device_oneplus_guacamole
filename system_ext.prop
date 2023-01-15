@@ -4,3 +4,9 @@ persist.bluetooth.bqr.min_interval_ms=60000
 
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+
+# Display
+debug.sf.enable_hwc_vds=1
+
+# Netflix
+ro.netflix.bsp_rev=Q855-16947-1
