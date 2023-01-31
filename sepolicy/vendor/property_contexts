@@ -6,6 +6,7 @@ ro.vendor.aware_available          u:object_r:deviceid_prop:s0
 
 # Bluetooth
 persist.vendor.bt.a2dp_offload_cap    u:object_r:bluetooth_a2dp_offload_prop:s0
+persist.sys.bt.a2dp.pendingtime                       u:object_r:exported_system_prop:s0
 
 # Camera
 camera.OPpictureId    u:object_r:vendor_camera_prop:s0
