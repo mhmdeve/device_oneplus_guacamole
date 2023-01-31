@@ -60,6 +60,7 @@
         <item>com.oneplus.healthcheck</item>
         <item>com.oem.autotest</item>
         <item>org.pixelexperience.faceunlock</item>
+        <item>org.lineageos.aperture</item>
     </string-array>
 
     <!-- Whether Device Support UDFPS or Not -->
