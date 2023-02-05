@@ -762,4 +762,7 @@
 
     <!-- Screen off delay -->
     <integer name="config_screen_off_delay">0</integer>
+
+    <!-- Whether to force enable multi resolution configuration for camera -->
+    <bool name="config_forceMultiResolution">true</bool>
 </resources>
