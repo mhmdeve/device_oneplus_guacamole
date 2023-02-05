@@ -382,7 +382,7 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|e70fda0288
 
 # Dolby
 -system_ext/priv-app/DaxUI/DaxUI.apk|d735861d681ae7c37d021a328fa19acb
--system_ext/priv-app/daxService/daxService.apk|ec7da3a4b973c070a37d58b840e21983b0cf9933
+-system_ext/priv-app/daxService/daxService.apk|f850868896594a9ca729ea373af3fdddb26c85bc
 system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec1273befed
 system_ext/etc/permissions/privapp-com.dolby.daxappui.xml|b783016728b17eadfcdad662ccaf546afbeab856
 system_ext/etc/permissions/privapp-com.dolby.daxservice.xml|cdd700ce16303ff2baa41eac44ed779f545db418
