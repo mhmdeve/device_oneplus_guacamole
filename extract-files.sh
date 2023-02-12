@@ -61,6 +61,9 @@ function blob_fixup() {
         vendor/bin/hw/qcrild)
             "${PATCHELF}" --add-needed libril_shim.so "${2}"
             ;;
+        vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
+            echo 'madvise: 1' >> ${2}
+            ;;
     esac
 }
 
