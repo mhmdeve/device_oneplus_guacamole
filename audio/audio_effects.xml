@@ -41,6 +41,7 @@
         <library name="proxy" path="libeffectproxy.so"/>
         <library name="offload_bundle" path="libqcompostprocbundle.so"/>
         <library name="audio_pre_processing" path="libqcomvoiceprocessing.so"/>
+        <library name="volume_listener" path="libvolumelistener.so"/>
         <library name="audiosphere" path="libasphere.so"/>
         <library name="shoebox" path="libshoebox.so"/>
         <!--DOLBY DAP-->
