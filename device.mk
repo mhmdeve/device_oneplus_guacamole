@@ -470,6 +470,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediaswcodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaswcodec.policy \
     $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
+# Set dexopt downgrade threshold or dexopt will fail
+PRODUCT_SYSTEM_PROPERTIES += \
+    pm.dexopt.downgrade_after_inactive_days=5
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.audio@4.0.vendor:64 \
