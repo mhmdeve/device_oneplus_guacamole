@@ -76,6 +76,9 @@ on early-init
     rm /data/system/package_cache 
     
 on init
+
+    # Change permissions for /dev/diag
+    chmod 0666 /dev/diag
     
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -732,7 +735,7 @@ on property:vendor.wifi.ftmd.load=true
 service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     class late_start
     user system
-    group system inet net_admin wifi
+    group system inet net_admin wifi oem_2901
     capabilities NET_ADMIN
 
 on property:sys.shutdown.requested=*
