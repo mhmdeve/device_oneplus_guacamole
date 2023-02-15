@@ -93,7 +93,7 @@
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <!-- Back Camera -->
-    <CamcorderProfiles cameraId="0" startOffsetMs="300">
+    <CamcorderProfiles cameraId="0">
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -212,7 +212,7 @@
              channels="2" />
     </EncoderProfile>
 -->
-    <!--<EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
+    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="42000000"
             width="4096"
@@ -223,7 +223,7 @@
             bitRate="156000"
             sampleRate="48000"
             channels="2" />
-    </EncoderProfile>-->
+    </EncoderProfile>
 
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -419,7 +419,7 @@
              channels="2" />
     </EncoderProfile>
 
-    <!--<EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
+    <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="42000000"
             width="4096"
@@ -430,7 +430,7 @@
             bitRate="156000"
             sampleRate="48000"
             channels="2" />
-    </EncoderProfile>-->
+    </EncoderProfile>
 
     <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -511,7 +511,7 @@
 
     </CamcorderProfiles>
     <!-- Front Camera -->
-    <CamcorderProfiles cameraId="1" startOffsetMs="300">
+    <CamcorderProfiles cameraId="1">
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -630,7 +630,7 @@
              channels="2" />
     </EncoderProfile>
 -->
-   <!-- <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
+    <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="42000000"
             width="4096"
@@ -641,7 +641,7 @@
             bitRate="156000"
             sampleRate="48000"
             channels="2" />
-    </EncoderProfile> -->
+    </EncoderProfile>
 
 <!--VENDOR_EDIT-->
     <!--EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
