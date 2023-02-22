@@ -9,7 +9,8 @@ git clone https://github.com/PixelPlusUI-Devices/vendor_oneplus_guacamole -b tir
 echo ""
 
 echo "Cloning kernel tree"
-git clone https://github.com/PixelPlusUI-Devices/kernel_oneplus_guacamole kernel/oneplus/sm8150
+git clone https://github.com/PixelPlusUI-Devices/kernel_oneplus_guacamole -b tiramisu-neptune kernel/oneplus/sm8150
+git clone https://gitlab.com/Flamingo-OS/dora_clang -b A13 prebuilts/clang/host/linux-x86/clang-dora/ --depth=1
 echo ""
 
 # OnePlus Stuff 
