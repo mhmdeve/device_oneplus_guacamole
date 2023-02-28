@@ -206,6 +206,7 @@ PRODUCT_PACKAGES += \
     init.oem.rc \
     init.oem_ftm.rc \
     init.opcamera.rc \
+    init.oneplus.usb.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
