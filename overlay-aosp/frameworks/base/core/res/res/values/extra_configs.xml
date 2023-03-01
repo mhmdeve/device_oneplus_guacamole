@@ -17,7 +17,7 @@
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.evolution.oneplus.DeviceExtras.slider.KeyHandler</item>
         <item>org.evolution.oneplus.DeviceExtras.touch.KeyHandler</item>
-        <item>org.evolution.camerahelper.KeyHandler</item>
+        <item>org.lineageos.camerahelper.KeyHandler</item>
     </string-array>
 
     <!-- Whether device has physical tri state switch -->
