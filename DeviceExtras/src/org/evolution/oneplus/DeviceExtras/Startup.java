@@ -116,6 +116,10 @@ public class Startup extends BroadcastReceiver {
         mHBM = false;
         restore(WideModeSwitch.getFile(context), enabled);
         }
+        enabled = sharedPrefs.getBoolean(DeviceExtras.KEY_AUTO_HBM_SWITCH, false);
+        if (enabled) {
+        FileUtils.enableService(context);
+        }
     }
 
     private void restore(String file, boolean enabled) {
