@@ -320,7 +320,10 @@ on boot
 
     # QTI PowerHAL
     chown system system /sys/kernel/hbtp/display_pwr
-    
+
+    # VPP - tunnings
+    copy  /vendor/etc/vpp/tunings.txt /mnt/vendor/persist/vpp/tunings.txt    
+
 # msm specific files that need to be created on /data
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
