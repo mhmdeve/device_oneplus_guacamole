@@ -20,10 +20,10 @@
     <bool name="config_deviceSupportsAlertSlider">true</bool>
 
     <!-- Whether device supports Panel Modes -->
-    <bool name="config_deviceSupportsPanelModes">true</bool>
+    <bool name="config_deviceSupportsPanelModes">false</bool>
 
     <!-- Whether device supports Kcal -->
-    <bool name="config_deviceSupportsKcal">true</bool>
+    <bool name="config_deviceSupportsKcal">false</bool>
 
     <!-- Whether device supports DC-dimming -->
     <bool name="config_deviceSupportsDCdimming">true</bool>
