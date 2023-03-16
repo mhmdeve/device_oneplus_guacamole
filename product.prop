@@ -36,6 +36,5 @@ ro.com.baidu.input.pad_land_l=19
 ro.com.baidu.input.pad_land_r=19
 ro.com.baidu.input.pad_land_b=10
 
-# Elixir Stuff
-org.elixir.device=OnePlus 7 Pro
-
+# Camera
+persist.sys.aux.camera_oem_package=com.oneplus.camera

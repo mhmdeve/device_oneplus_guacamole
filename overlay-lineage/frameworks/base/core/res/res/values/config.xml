@@ -43,26 +43,6 @@
     <!-- Whether devices suports in-display fingerprint when screen is off -->
     <bool name="config_supportsScreenOffUdfps">true</bool>
 
-    <!-- The list of package IDs that are not allowed to use aux cameras. -->
-    <string-array name="config_cameraAuxPackageExcludeList" translatable="false">
-        <item>org.telegram.messenger</item>
-        <item>org.thunderdog.challegram</item>
-        <item>us.zoom.videomeetings</item>
-    </string-array>
-
-    <!-- The list of package IDs that are not allowed to use aux cameras. -->
-    <string-array name="config_cameraAuxPackageAllowList" translatable="false">
-        <item>com.oneplus.factorymode</item>
-        <item>com.oneplus.camera</item>
-        <item>com.google.android.GoogleCamera</item>
-        <item>com.google.android.GoogleCameraEng</item>
-        <item>org.codeaurora.snapcam</item>
-        <item>com.oneplus.healthcheck</item>
-        <item>com.oem.autotest</item>
-        <item>org.pixelexperience.faceunlock</item>
-        <item>org.lineageos.aperture</item>
-    </string-array>
-
     <!-- Whether Device Support UDFPS or Not -->
     <bool name="config_supportUdfps">true</bool>
 </resources>

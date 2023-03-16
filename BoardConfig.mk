@@ -17,14 +17,17 @@ DEVICE_PATH := device/oneplus/guacamole
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-2a-dotprod
 TARGET_CPU_ABI := arm64-v8a
-TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a76
+TARGET_CPU_VARIANT_RUNTIME := cortex-a76
 
+ifeq (,$(filter %_64,$(TARGET_PRODUCT)))
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a76
+TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a76
+endif
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := msmnile
@@ -42,8 +45,8 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_CONFIG := sm8150-perf_defconfig
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8150
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r475365b
-TARGET_KERNEL_BUILD_HOST := Elixir
+TARGET_KERNEL_CLANG_VERSION := r487747
+TARGET_KERNEL_BUILD_HOST := MHMDeveloper
 TARGET_KERNEL_BUILD_USER := "Master"
 
 # Platform
@@ -167,7 +170,7 @@ SOONG_CONFIG_ONEPLUS_MSMNILE_SENSORS_ALS_POS_Y := 278
 VENDOR_SECURITY_PATCH := 2022-08-05
 
 # SELinux
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom/sepolicy_vndr-legacy-um/SEPolicy.mk
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public

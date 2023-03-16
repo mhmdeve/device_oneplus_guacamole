@@ -11,14 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from guacamole device
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
-# Inherit some common PixelPlusUI stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Rice stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # OnePlus apps
 $(call inherit-product-if-exists, vendor/oneplus/apps/apps-vendor.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_guacamole
+PRODUCT_NAME := lineage_guacamole
 PRODUCT_DEVICE := guacamole
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := OnePlus 7 Pro
@@ -28,21 +28,17 @@ PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
-# PixelPlusUI Official Props
-CUSTOM_BUILD_TYPE := OFFICIAL
-IS_PHONE := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
-PPUI_MAINTAINER := Master
-TARGET_SUPPORTS_QUICK_TAP  := true
-TARGET_BUILD_APERTURE_CAM  := true
-
-# Elixir Official Props
-EXTRA_UDFPS_ANIMATIONS := true
-ELIXIR_MAINTAINER := Master
-ELIXIR_BUILD_TYPE := OFFICIAL
+# Rice Props
+RICE_CHIPSET := "msmnile"
+RICE_MAINTAINER := "Master"
+SUSHI_BOOTANIMATION := 1440
+TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_ENABLE_BLUR := true
+TARGET_HAS_UDFPS := true
+TARGET_USE_PIXEL_FINGERPRINT := true
+WITH_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_CORE_GMS_EXTRAS := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
