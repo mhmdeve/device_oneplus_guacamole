@@ -957,6 +957,14 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmiservices.so
 
+# QSPM - from LA.UM.9.14.r1-20200-LAHAINA.QSSI13.0
+vendor/bin/vendor.qti.qspmhal@1.0-service|3a3dc6934387bc82087edef764726602b8f4e02a
+vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc|bdc5cbedd1688807409c72262824ca9162b20239
+vendor/etc/seccomp_policy/qspm.policy|943dd12bd4ae7cb0037b2e246143d76bb1787257
+vendor/lib64/vendor.qti.qspmhal@1.0-impl.so|9b89a25a20fcaaafb9da162d52b16b1fa144705e
+vendor/lib64/vendor.qti.qspmhal@1.0.so|b2726e553303d4167cf8df6a93377fc13a20ebdf
+system_ext/lib64/libpenguin.so|049a5759fa199c59eaebb3fbb26f7a3c68bcc077
+
 # RIL
 -system/framework/qcnvitems.jar
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
