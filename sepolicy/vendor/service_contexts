@@ -1,1 +1,2 @@
 ParamService                    u:object_r:oem_service:s0
+android.system.keystore2                  u:object_r:keystore_service:s0
