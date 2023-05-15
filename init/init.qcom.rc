@@ -91,6 +91,8 @@ on init
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
+    setprop vendor.boot.project_name ${ro.boot.project_name}
+
     # Report max frequency to unity tasks.
     write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
     write /proc/sys/kernel/sched_lib_mask_force 255

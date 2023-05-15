@@ -75,6 +75,7 @@ ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.bluetooth.wipower=false
 
 # Camera
+vendor.camera.algo.jpeghwencode=0
 ro.vendor.camera.res.fmq.size=1048576
 persist.camera.eis.enable=1
 persist.camera.is_mode=4

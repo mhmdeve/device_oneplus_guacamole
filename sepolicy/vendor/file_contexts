@@ -12,6 +12,54 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/param          u:object_r:param_block_device:s0
 /dev/block/vbswap0                                            u:object_r:swap_block_device:s0
 
+# Camera
+/mnt/vendor/dsp/fastrpc_shell_3                                                   u:object_r:public_adsprpcd_file:s0
+/mnt/vendor/persist/camera(/.*)?                     u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/dual_camera_calibration(/.*)?    u:object_r:persist_camera_file:s0
+/mnt/vendor/persist/engineermode(/.*)?               u:object_r:persist_engineer_file:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                                     u:object_r:hal_cameraHIDL_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                              u:object_r:hal_cameraHIDL_default_exec:s0
+(odm|vendor|odm)/lib64/libarcsoft_dualcam_bokeh_api\.so                          u:object_r:same_process_hal_file:s0
+/(odm|vendor|odm)/lib64/libarcsoft_dualcam_refocus_left\.so                       u:object_r:same_process_hal_file:s0
+/(odm|vendor|odm)/lib64/libarcsoft_dualcam_refocus_preview\.so                    u:object_r:same_process_hal_file:s0
+/(odm|vendor|odm)/lib64/libarcsoft_dualcam_refocus_right\.so                      u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/dsp(/.*)?                                                 u:object_r:adsprpcd_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libarcsoft_dualcam_refocus_skel\.so         u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libarcsoft_hdrplus_hvx_skel\.so             u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libBeautyShot_skel\.so                      u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libdspCV_skel\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libfastcvadsp\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libfastcvdsp_skel\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib/rfsa/adsp/libSuperSensor_skel\.so                     u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libfastcvdsp_stub\.so                            u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libfastcvopt\.so                                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_beautyshot\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_distortion_correction\.so                u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_dualcam_refocus_uw\.so                   u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_hdr_couple_api\.so                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_hdr_denoise_api\.so                      u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_hdrplus_hvx_stub\.so                     u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_high_dynamic_range_couple\.so            u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_high_dynamic_range\.so                   u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_low_light_hdr\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_portrait_distortion_correction\.so       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_smart_denoise\.so                        u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libarcsoft_super_night_raw\.so                      u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/lib_bokehlib\.so                                    u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libcvface_api\.so                                   u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libhta_hexagon_runtime\.so                          u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libipebpsstriping\.so                               u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libmpbase\.so                                       u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libnpu\.so                                          u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/lib_oneplus_watermark\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libstblur_capture_api\.so                           u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libSuperSensorFallback\.so                          u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libSuperSensorProcessorCWrapper\.so                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libSuperSensorProcessor\.so                         u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libSuperSensor\.so                                  u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/libtriplecam_image_optical_zoom\.so                 u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib64/unnhal-acc-hta\.so                                  u:object_r:same_process_hal_file:s0
+
 # Data files
 /data/fpc_images(/.*)?            u:object_r:fpc_images_file:s0
 /data/vendor/dolby(/.*)?          u:object_r:vendor_data_file:s0
@@ -38,28 +86,15 @@
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.oneplus_msmnile                         u:object_r:hal_livedisplay_oneplus_msmnile_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.oneplus                                 u:object_r:hal_lineage_touch_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                                          u:object_r:hal_dms_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.camera@1\.0-service                                     u:object_r:hal_cameraHIDL_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.CameraMDMHIDL@1\.0-service                              u:object_r:hal_cameraHIDL_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.display@1\.0-service                                    u:object_r:hal_display_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.hdcpkey@1\.0-service                                    u:object_r:hal_hdcpkey_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.ifaa@2\.0-service                                       u:object_r:hal_ifaa_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.oneplus\.hardware\.param@1\.0-service                                      u:object_r:hal_param_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.oneplus7pro                          u:object_r:hal_vibrator_default_exec:s0
 
-
-# Hexagon DSP-side executable needed for Halide operation
-# This is labeled as public_adsprpcd_file as it needs to be read by apps
-# (e.g. Google Camera App)
-/mnt/vendor/dsp/fastrpc_shell_3                                               u:object_r:public_adsprpcd_file:s0
-
 # OP1, OP2 files
 /mnt/vendor/op1(/.*)?    u:object_r:op1_file:s0
 /mnt/vendor/op2(/.*)?    u:object_r:op2_file:s0
-
-# Persist files
-/mnt/vendor/persist/camera(/.*)?                     u:object_r:persist_camera_file:s0
-/mnt/vendor/persist/dual_camera_calibration(/.*)?    u:object_r:persist_camera_file:s0
-/mnt/vendor/persist/engineermode(/.*)?               u:object_r:persist_engineer_file:s0
 
 # Power
 /vendor/bin/hw/android\.hardware\.power-service-qti                     u:object_r:hal_power_default_exec:s0

@@ -9,10 +9,19 @@ persist.vendor.bt.a2dp_offload_cap    u:object_r:bluetooth_a2dp_offload_prop:s0
 persist.sys.bt.a2dp.pendingtime                       u:object_r:exported_system_prop:s0
 
 # Camera
-camera.OPpictureId    u:object_r:vendor_camera_prop:s0
-ro.camera.            u:object_r:vendor_camera_prop:s0
-vendor.camera.        u:object_r:vendor_camera_prop:s0
-vendor.oneplus.gallery.debugStory     u:object_r:vendor_camera_prop:s0
+camera.                                u:object_r:exported_system_prop:s0
+camera.OPpictureId                     u:object_r:exported_system_prop:s0
+ro.camera.                             u:object_r:exported_system_prop:s0
+vendor.camera.                         u:object_r:exported_system_prop:s0
+vendor.oneplus.gallery.debugStory      u:object_r:exported_system_prop:s0
+persist.camera.                        u:object_r:exported_system_prop:s0
+persist.vendor.aps.debug.framenum      u:object_r:exported_system_prop:s0
+persist.vendor.apsSN.algo.enable       u:object_r:exported_system_prop:s0
+persist.vendor.arcsoft.sn.dumprawinfo  u:object_r:exported_system_prop:s0
+persist.vendor.facebeauty.dump         u:object_r:exported_system_prop:s0
+persist.vendor.supernight.dump         u:object_r:exported_system_prop:s0
+vendor.runtime.fastcv.log              u:object_r:exported_system_prop:s0
+vendor.boot.project_name               u:object_r:exported_system_prop:s0
 
 # Display
 persist.vendor.color.matrix    u:object_r:vendor_display_prop:s0
@@ -22,6 +31,11 @@ ro.fastbootd.available                 u:object_r:exported_default_prop:s0
 
 # FTM mode
 ro.boot.ftm_mode    u:object_r:exported_default_prop:s0
+
+# Logging
+persist.sys.assert.panic            u:object_r:exported_system_prop:s0
+persist.al.cfr.loglevel             u:object_r:exported_system_prop:s0
+persist.sys.log.                    u:object_r:exported_system_prop:s0
 
 # Memplus
 vendor.sys.memplus.    u:object_r:vendor_memplus_prop:s0
