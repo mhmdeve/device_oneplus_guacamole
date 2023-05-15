@@ -25,7 +25,7 @@
 
 #include "uevent_listener.h"
 
-#define HALL_CALIBRATION_DATA "/sys/bus/platform/devices/soc:tri_state_key/hall_data_calib"
+#define HALL_CALIBRATION_DATA "/sys/devices/platform/soc/soc:tri_state_key/hall_data_calib"
 #define HALL_PERSIST_CALIBRATION_DATA "/mnt/vendor/persist/engineermode/tri_state_hall_data"
 
 #define KEY_MODE_NORMAL 601
@@ -91,7 +91,7 @@ int main() {
         }
 
         bool none = uevent.state.find("USB=0") != std::string::npos;
-        bool vibration = uevent.state.find("USB-HOST=0") != std::string::npos;
+        bool vibration = uevent.state.find("HOST=0") != std::string::npos;
         bool silent = uevent.state.find("null)=0") != std::string::npos;
 
         int keyCode;
