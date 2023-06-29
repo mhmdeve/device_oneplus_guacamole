@@ -19,4 +19,6 @@
     <!-- Fingerprint from stock ROM -->
     <string name="stock_fingerprint" translatable="false">OnePlus/OnePlus7Pro_EEA/OnePlus7Pro:11/RKQ1.201022.002/2206162227:user/release-keys</string>
 
+    <!-- Default value for performant auth feature. -->
+    <bool name="config_performantAuthDefault">true</bool>
 </resources>
