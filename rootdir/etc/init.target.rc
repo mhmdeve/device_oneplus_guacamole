@@ -135,6 +135,10 @@ on boot
     chmod 0666 /sys/kernel/hbtp/display_pwr
     chown system system /sys/kernel/hbtp/display_pwr
     
+    # Fast Charge
+    chown system system /sys/class/qcom-battery/restrict_chg
+    chmod 0666 /sys/class/qcom-battery/restrict_chg
+
     chown system system /sys/kernel/qvr_external_sensor/fd
     start rmt_storage
     start rfs_access
