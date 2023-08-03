@@ -180,6 +180,8 @@ void vendor_load_properties() {
       break;
     }
     
+  property_override("ro.boot.hardware.sku", "pn553");
+  
     // dalvikvm props
   load_dalvikvm_properties();
 
