@@ -70,4 +70,7 @@
         <item>org.lineageos.aperture.dev</item>
         <item>org.pixelexperience.faceunlock</item>
     </string-array>
+
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
 </resources>
