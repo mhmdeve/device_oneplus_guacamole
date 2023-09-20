@@ -58,6 +58,10 @@
     <!-- Smart charging -->
     <bool name="config_smartChargingAvailable">true</bool>
 
+    <!-- Smart charging sysfs node and values for suspend/resume charging -->
+    <string name="config_smartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/mmi_charging_enable</string>
+    <string name="config_smartChargingSuspendValue" translatable="false">0</string>
+    <string name="config_smartChargingResumeValue" translatable="false">1</string>
 
     <!-- The list of package IDs that are allowed to use aux cameras.
          NOTE: If this list is empty then all apps will be able to use aux cameras. -->
