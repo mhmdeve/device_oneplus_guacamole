@@ -19,6 +19,9 @@
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
 
+    <!-- Whether to show min/max refresh rate in display settings -->
+    <bool name="config_show_refresh_rate_controls">true</bool>
+    
     <!-- About device screen, build maintainer -->
     <string name="build_device_url">https://t.me/evox_guacamole</string>
     <string name="build_maintainer_summary">Master</string>
