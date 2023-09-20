@@ -54,4 +54,7 @@
          0: Left side
          1: Right side -->
     <integer name="config_alertSliderLocation">1</integer>
+
+    <!-- Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
 </resources>
