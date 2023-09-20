@@ -73,4 +73,11 @@
 
     <!-- Whether the device supports Smart Pixels -->
     <bool name="config_supportSmartPixels">true</bool>
+
+    <!-- The list of package IDs that are allowed to skip camera high frame rate checks. -->
+    <string-array name="config_cameraHFRPrivAppList" translatable="false">
+        <item>com.android.camera</item>
+        <item>com.oneplus.camera</item>
+        <item>org.lineageos.aperture</item>
+    </string-array>
 </resources>
