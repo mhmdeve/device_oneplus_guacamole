@@ -19,4 +19,8 @@
     <!-- Whether to show Smooth Display feature in Settings Options -->
     <bool name="config_show_smooth_display">true</bool>
 
+    <!-- About device screen, build maintainer -->
+    <string name="build_device_url">https://t.me/evox_guacamole</string>
+    <string name="build_maintainer_summary">Master</string>
+    <string name="build_maintainer_donate_url">https://www.patreon.com/mhmdeveloper</string>
 </resources>
