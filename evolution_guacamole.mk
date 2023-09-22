@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
 # Inherit some common Evolution stuff.
-$(call inherit-product, vendor/evolution/config/common.mk)
+$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_guacamole
