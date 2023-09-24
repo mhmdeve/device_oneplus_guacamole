@@ -265,10 +265,10 @@
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
          [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
     <integer-array translatable="false" name="config_tether_upstream_types">
-        <item>1</item>
-        <item>7</item>
         <item>0</item>
+        <item>1</item>
         <item>5</item>
+        <item>7</item>
     </integer-array>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
@@ -337,10 +337,9 @@
     <!-- An Array of "[ConnectivityManager connectionType],
                       [# simultaneous connection types]"  -->
     <string-array translatable="false" name="radioAttributes">
-        <item>"1,1"</item>
-        <item>"0,1"</item>
-        <item>"7,1"</item>
-        <item>"9,1"</item>
+        <item>1,1</item>
+        <item>0,1</item>
+        <item>7,1</item>
     </string-array>
 
     <!-- Boolean indicating if restoring network selection should be skipped -->
