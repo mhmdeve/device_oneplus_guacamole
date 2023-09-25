@@ -1274,6 +1274,7 @@ vendor/firmware/wentai24k_rtp.bin
 vendor/bin/vppservice
 vendor/etc/configstore/vpp.configstore.xml
 vendor/etc/init/vppservice.rc
+vendor/etc/vpp/tunings.txt
 vendor/lib/libvppclient.so
 vendor/lib/libvpphcp.so
 vendor/lib/libvpphvx.so
