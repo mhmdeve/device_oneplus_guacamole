@@ -162,6 +162,7 @@ ro.hardware.nfc_nci=nqx.default
 
 # OnePlus
 vendor.product.manufacturer=OPD
+vendor.product.device=guacamole
 
 # PASR
 vendor.pasr.activemode.enabled=true
