@@ -20,15 +20,16 @@ import os
 import sys
 from hashlib import sha1
 
+# Define device and vendor information
 device = 'guacamole'
 vendor = 'oneplus'
+vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'  # Define vendorPath globally
 
+# Read the proprietary-files.txt file
 with open('proprietary-files.txt', 'r') as f:
     lines = f.read().splitlines()
-vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
-needSHA1 = False
 
-
+# Define a Section class to group file entries
 class Section:
     def __init__(self, name, group):
         self.name = name
@@ -45,7 +46,7 @@ class Section:
             lines.extend(self.group)
             lines.append('')
 
-
+# Function to sort the file entries
 def sort_file(ignore_section=""):
     grp = []
     sections = []
@@ -73,7 +74,7 @@ def sort_file(ignore_section=""):
     for section in sections:
         section.apply()
 
-
+# Function to cleanup the file entries
 def cleanup():
     for index, line in enumerate(lines):
         # Skip empty or commented lines
@@ -84,8 +85,9 @@ def cleanup():
         lines[index] = line.split('|')[0]
     lines.append('')
 
-
+# Function to update SHA1 hashes for file entries
 def update():
+    needSHA1 = False
     for index, line in enumerate(lines):
         # Skip empty lines
         if len(line) == 0:
@@ -110,7 +112,7 @@ def update():
             lines[index] = '%s|%s' % (line, hash)
     lines.append('')
 
-
+# Check command line arguments
 if len(sys.argv) >= 2:
     if sys.argv[1] == '-c':
         cleanup()
@@ -124,5 +126,6 @@ if len(sys.argv) >= 2:
 else:
     update()
 
+# Write the updated content back to proprietary-files.txt
 with open('proprietary-files.txt', 'w') as file:
     file.write('\n'.join(lines))
