@@ -968,7 +968,7 @@ vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/ssgtzd.rc
 vendor/etc/init/vendor.oneplus.hardware.param@1.0-service.rc
-vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.rmt_storage.rc|cece6e63944f94ec6bd4d8458ef4cc9c2e54b683
 vendor/etc/init/vendor.qti.tftp.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
 vendor/etc/ssg/ta_config.json
