@@ -50,6 +50,7 @@ media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 persist.mm.enable.prefetch=true
 vendor.swvdec.log.level=1
 vendor.vidc.debug.level=1
+vendor.mm.enable.qcom_parser=16711679
 
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_age=5000
