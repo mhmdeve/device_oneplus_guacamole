@@ -25,6 +25,8 @@
     <string name="dc_mode_title">Anti-flicker mode</string>
     <string name="tile_hbm_mode">Outdoor mode</string>
     <string name="tile_dc_mode">Anti-flicker</string>
+    <string name="battery_health_title">Battery Health</string>
+    <string name="battery_health_summery">Click to Check you battery health</string>
 
     <!-- Screen off Gestures - Input -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>

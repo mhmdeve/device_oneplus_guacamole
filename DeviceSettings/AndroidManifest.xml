@@ -53,6 +53,9 @@
 
         <activity android:name=".DeviceSettings" />
         <activity android:name=".KeyHandler" />
+        <activity 
+            android:name=".BatteryHealthActivity"
+            android:label="@string/battery_health_title"/>
 
         <activity
             android:name=".TouchscreenGestureActivity"
