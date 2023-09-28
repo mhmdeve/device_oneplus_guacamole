@@ -27,7 +27,13 @@ import java.io.IOException;
 
 public class BatteryHealthActivity extends CollapsingToolbarBaseActivity {
     private static final String TAG = BatteryHealthActivity.class.getSimpleName();
-    private TextView batteryHealthTextView;
+    private TextView batteryHealthTextView, batteryConditionTextView, batteryDesignCapTextView, batteryTempTextView;
+
+    // Battery Nodes
+    String batteryHealthFile;
+    String batteryDesignCapFile;
+    String batteryTempFile;
+    String batteryConditionFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,17 +41,38 @@ public class BatteryHealthActivity extends CollapsingToolbarBaseActivity {
         setContentView(R.layout.activity_battery_health);
 
         batteryHealthTextView = findViewById(R.id.batteryHealthTextView);
+        batteryConditionTextView = findViewById(R.id.batteryConditionTextView);
+        batteryDesignCapTextView = findViewById(R.id.batteryDesignCapTextView);
+        batteryTempTextView = findViewById(R.id.batteryTempTextView);
 
-        // Specify the path to the battery health file
-        String batteryHealthFile = "/sys/class/power_supply/bms/battery_health";
-
-        // Read and parse the battery health
-        String batteryHealth = parseBatteryHealth(batteryHealthFile);
+        // Specify the path to the battery nodes file
+        batteryHealthFile = "/sys/class/power_supply/bms/battery_health";
+        batteryConditionFile = "/sys/class/power_supply/battery/health";
+        batteryDesignCapFile = "/sys/class/power_supply/bms/battery_type";
+        batteryTempFile = "/sys/class/power_supply/battery/temp";
 
         // Update the TextView with the battery health information
-        batteryHealthTextView.setText("Battery Health: " + batteryHealth);
+        batteryHealthTextView.setText("Battery Health: " + parseBatteryHealth(batteryHealthFile));
+        batteryConditionTextView.setText("Battery Condition: " + parseBatteryCondition(batteryConditionFile));
+        batteryDesignCapTextView.setText("Battery Design Cap: " + parseBatteryCondition(batteryDesignCapFile).split("_")[1].split("m")[0] + " mAh");
+        batteryTempTextView.setText("Temperature: " + parseBatteryTempText(batteryTempFile));
+
+
     }
 
+    private String parseBatteryTempText(String file) {
+        try {
+            return Integer.parseInt(readLine(file)) / 10 + " \u2103";
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery temperature from "
+                    + file, ioe);
+        } catch (NumberFormatException nfe) {
+            Log.e(TAG, "Read a badly formatted battery temperature from "
+                    + file, nfe);
+        }
+        return getResources().getString(R.string.status_unavailable);
+    }
+    
     private String parseBatteryHealth(String file) {
         try {
             return Integer.parseInt(readLine(file)) + " %";
@@ -53,6 +80,15 @@ public class BatteryHealthActivity extends CollapsingToolbarBaseActivity {
             Log.e(TAG, "Cannot read battery Health from " + file, ioe);
         } catch (NumberFormatException nfe) {
             Log.e(TAG, "Read a badly formatted battery Health from " + file, nfe);
+        }
+        return getResources().getString(R.string.status_unavailable);
+    }
+
+    private String parseBatteryCondition(String file) {
+        try {
+            return readLine(file);
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery Health condition from " + file, ioe);
         }
         return getResources().getString(R.string.status_unavailable);
     }

@@ -27,6 +27,7 @@
     <string name="tile_dc_mode">Anti-flicker</string>
     <string name="battery_health_title">Battery Health</string>
     <string name="battery_health_summery">Click to Check you battery health</string>
+    <string name="status_unavailable">Unavailable</string>
 
     <!-- Screen off Gestures - Input -->
     <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
