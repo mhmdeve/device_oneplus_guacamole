@@ -62,7 +62,9 @@ class TakeScreenshotCommand : public FrameworkCommand {
         gui::ScreenCaptureResults captureResults;
 
         DisplayCaptureArgs captureArgs;
-        captureArgs.displayToken = SurfaceComposerClient::getInternalDisplayToken();
+        const auto ids = SurfaceComposerClient::getPhysicalDisplayIds();
+
+        captureArgs.displayToken = SurfaceComposerClient::getPhysicalDisplayToken(ids.front());
         captureArgs.pixelFormat = android::ui::PixelFormat::RGBA_8888;
         captureArgs.sourceCrop = screenshot_rect;
         captureArgs.width = screenshot_rect.getWidth();
@@ -71,7 +73,7 @@ class TakeScreenshotCommand : public FrameworkCommand {
         status_t ret = ScreenshotClient::captureDisplay(captureArgs, captureListener);
         if (ret == NO_ERROR) {
             captureResults = captureListener->waitForResults();
-            if (captureResults.result == NO_ERROR)  outBuffer = captureResults.buffer;
+            if (captureResults.fenceResult.ok())  outBuffer = captureResults.buffer;
         }
 
         uint8_t *out;
