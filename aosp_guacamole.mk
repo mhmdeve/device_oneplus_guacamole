@@ -12,14 +12,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit from guacamole device
 $(call inherit-product, device/oneplus/guacamole/device.mk)
 
-# Inherit some common Evolution stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+# Inherit some common Elixir stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # OnePlus Apps
 $(call inherit-product, vendor/oneplus/apps/apps-vendor.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := evolution_guacamole
+PRODUCT_NAME := aosp_guacamole
 PRODUCT_DEVICE := guacamole
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := GM1913
@@ -35,15 +35,15 @@ PRODUCT_CHARACTERISTICS := nosdcard
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# Custom stuff.
-TARGET_BUILD_APERTURE_CAMERA := false
-TARGET_USE_PIXEL_FINGERPRINT := true
-TARGET_USES_PICO_GAPPS := true
-TARGET_INCLUDE_PIXEL_CHARGER := true
+# Elixir stuff
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_ENABLE_BLUR := true
-EXTRA_UDFPS_ANIMATIONS := true
-EVO_BUILD_TYPE := SPECIAL
+TARGET_USES_AOSP_RECOVERY := true
+ELIXIR_MAINTAINER := Master
+ELIXIR_BUILD_TYPE := OFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_STOCK_ACORE := false
+TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 # Gapps Build Details
 TARGET_GAPPS_ARCH := arm64
