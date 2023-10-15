@@ -57,7 +57,7 @@
             android:name=".BatteryHealthActivity"
             android:label="@string/battery_health_title"/>
 
-        <activity
+        <!-- <activity
             android:name=".TouchscreenGestureActivity"
             android:exported="true"
             android:label="@string/touchscreen_gesture_settings_title">
@@ -65,7 +65,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>
+        </activity> -->
 
         <receiver android:name="com.aosip.device.DeviceSettings.Startup"
                   android:exported="false">
