@@ -282,6 +282,8 @@ PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.1-service.oneplus7pro
 
 # Media
+TARGET_SUPPORTS_OMX_SERVICE := true
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
