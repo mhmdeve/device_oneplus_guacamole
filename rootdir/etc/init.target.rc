@@ -122,10 +122,6 @@ on post-fs-data
     mkdir /data/vendor/nnhal 0700 system system
     mkdir /data/vendor/audio/ultrasound 0770 audio audio
 
-    # Dolby
-    mkdir /data/vendor/dolby 0770 media media
-    mkdir /data/vendor/multimedia 0775 system system
-
 on early-boot
     start vendor.sensors
 
