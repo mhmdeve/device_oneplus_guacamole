@@ -646,8 +646,6 @@
         <item>"/apex/com.android.media/javalib/updatable-media.jar"</item>
         <item>"/system_ext/priv-app/SystemUIGoogle/SystemUIGoogle.apk"</item>
         <item>"/system/bin/surfaceflinger"</item>
-        <item>"/system_ext/priv-app/MotoDolbyDax3/MotoDolbyDax3.apk"</item>
-        <item>"/system_ext/priv-app/daxService/daxService.apk"</item>
     </string-array>
 
     <!-- The list of package IDs that are not allowed to use aux cameras. -->
