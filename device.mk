@@ -469,6 +469,7 @@ PRODUCT_SHIPPING_API_LEVEL := $(BOARD_API_LEVEL)
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
     $(LOCAL_PATH)
 
 # Telephony
