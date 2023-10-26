@@ -395,7 +395,7 @@ vendor/etc/hdr_config.cfg
 vendor/etc/sdr_config.cfg
 vendor/lib64/libhdr_tm.so
 
-# Display (SDM) - from NX627J - RKQ1.200826.002
+# Display (SDM) - from LA.UM.9.1.r1-11500.02-SMxxx0.QSSI12.0
 vendor/lib64/libdisplayqos.so|5548732c916e629f18f45ce257ce843b679a136a
 vendor/lib64/libqseed3.so|7f2a659fb9acd84d79c11dbd6901b816d5d1214f
 vendor/lib64/libsdedrm.so|5cf6147a8b33bb9ae4b99e6ba923d0be32295768
