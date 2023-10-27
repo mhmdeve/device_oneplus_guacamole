@@ -723,7 +723,6 @@ product/etc/permissions/vendor.qti.hardware.data.connectionaidl-V1-java.xml|28bd
 -product/framework/uimservicelibrary.jar|f96553f87efa437cd31c508810e7fe1e168284cf
 system/etc/permissions/privapp-permissions-qti.xml|3eda27003bad39514039190d0d7eb675ba034cb9
 system/etc/sysconfig/qti_whitelist.xml|04ebd5c8ccbec9f7a7ab5f76523a24f5d14c3bf4
--system/framework/android.hidl.manager-V1.0-java.jar|cc0430ff26b7f7658c738a7d38c553cd511d5f53
 -system/framework/tcmclient.jar|4e1dfaa243c67fec31b5a44086c9c417892761ae
 -system_ext/app/AtFwd2/AtFwd2.apk|d65361b042b0cea30d321d0aa798eddfd2f32913
 -system_ext/app/DeviceInfo/DeviceInfo.apk|425ceac460d33239abbae3b9f2434aab75f5450f
