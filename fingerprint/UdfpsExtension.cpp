@@ -4,7 +4,6 @@
  */
 
 #include <compositionengine/UdfpsExtension.h>
-#include <drm/sde_drm.h>
 
 #if __has_include(<display/drm/sde_drm.h>)
 #include <display/drm/sde_drm.h>
