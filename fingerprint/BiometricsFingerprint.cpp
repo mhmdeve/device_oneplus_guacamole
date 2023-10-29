@@ -96,7 +96,6 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t) {
 }
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, float) {
-    this->isCancelled = 0;
     mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1); // Fixme! workaround for in-app fod auth
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 1);
 
@@ -104,7 +103,7 @@ Return<void> BiometricsFingerprint::onFingerDown(uint32_t, uint32_t, float, floa
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
-    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
+    this->isCancelled = 0;
     mVendorDisplayService->setMode(OP_DISPLAY_NOTIFY_PRESS, 0);
 
     return Void();
@@ -181,7 +180,7 @@ FingerprintAcquiredInfo BiometricsFingerprint::VendorAcquiredFilter(
             if (info >= FINGERPRINT_ACQUIRED_VENDOR_BASE) {
                 // vendor specific code.
                 *vendorCode = info - FINGERPRINT_ACQUIRED_VENDOR_BASE;
-                return FingerprintAcquiredInfo::ACQUIRED_GOOD;
+                return FingerprintAcquiredInfo::ACQUIRED_VENDOR;
             }
     }
     ALOGE("Unknown acquiredmsg from fingerprint vendor library: %d", info);
@@ -207,6 +206,7 @@ Return<uint64_t> BiometricsFingerprint::preEnroll()  {
 
 Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69>& hat,
         uint32_t gid, uint32_t timeoutSec) {
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 1);
     mVendorFpService->updateStatus(OP_DISABLE_FP_LONGPRESS);
     mVendorFpService->updateStatus(OP_RESUME_FP_ENROLL);
 
@@ -216,6 +216,7 @@ Return<RequestStatus> BiometricsFingerprint::enroll(const hidl_array<uint8_t, 69
 }
 
 Return<RequestStatus> BiometricsFingerprint::postEnroll() {
+    mVendorDisplayService->setMode(OP_DISPLAY_SET_DIM, 0);
     mVendorFpService->updateStatus(OP_FINISH_FP_ENROLL);
     mVendorFpService->updateStatus(OP_ENABLE_FP_LONGPRESS);
 
@@ -350,7 +351,6 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onError callback");
                 }
-                getInstance()->onFingerUp();
             }
             break;
         case FINGERPRINT_ACQUIRED: {
