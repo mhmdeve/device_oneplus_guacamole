@@ -17,6 +17,9 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # OnePlus Apps
 $(call inherit-product, vendor/oneplus/apps/apps-vendor.mk)
 
+# Viper
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := evolution_guacamole
 PRODUCT_DEVICE := guacamole
