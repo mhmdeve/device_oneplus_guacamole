@@ -18,9 +18,6 @@ ro.opcamera.support=true
 # Camera
 persist.vendor.camera.sceneclassify.enable=0
 
-# Charger
-ro.charger.enable_suspend=true
-
 # CNE
 persist.vendor.cne.feature=1
 
