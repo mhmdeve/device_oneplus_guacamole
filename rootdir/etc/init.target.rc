@@ -135,6 +135,8 @@ on boot
     # Fast Charge
     chown system system /sys/class/qcom-battery/restrict_chg
     chmod 0666 /sys/class/qcom-battery/restrict_chg
+    chown system system /sys/class/power_supply/battery/fastchg_status
+    chmod 0664 /sys/class/power_supply/battery/fastchg_status
 
     chown system system /sys/kernel/qvr_external_sensor/fd
     start rmt_storage
