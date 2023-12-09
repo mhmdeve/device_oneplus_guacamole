@@ -538,6 +538,7 @@ PRODUCT_PACKAGES += \
     libwfdaac_vendor
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.enable_frame_rate_override=false \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.has_wide_color_display=true \
