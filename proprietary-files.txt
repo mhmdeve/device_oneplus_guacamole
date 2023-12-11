@@ -426,6 +426,45 @@ vendor/lib64/vendor.display.color@1.4.so
 vendor/lib64/vendor.display.color@1.5.so
 vendor/lib64/vendor.display.postproc@1.0.so
 
+# Dolby - from sweet-user-12-RKQ1.210614.002-V13.0.4.0.SKFMIXM-release-keys
+system_ext/etc/permissions/privapp-com.dolby.daxservice.xml|cdd700ce16303ff2baa41eac44ed779f545db418
+system_ext/etc/sysconfig/config-com.dolby.daxservice.xml|7690774632fe32269657fc1a2a0c941c7cd83f3d
+system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml|f647356bd3a4bb4174e873e4544c2921d51fd4d2
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|13457b78a8ec28ccb814700d21774ed7f3c22dd2
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
+vendor/lib/libqtigef.so|ef2f0eefe3b8b5e4d4bc559656de8c58cc461c01
+vendor/lib/libstagefright_soft_ac4dec.so|0d1fc4ab24b8f1d99468cceff3fe086b56500bd7
+vendor/lib/libstagefright_soft_ddpdec.so|31f63b7189829ca194766da67823b3fe7e92e9d2
+vendor/lib/libstagefrightdolby.so|4f1fdf8a564bb3d594241ec654811738043d9e3f
+vendor/lib/rfsa/adsp/capi_v2_dap_cpdp.so|8a89bfc289fad5442b163ff9107ce5e4b36fea6a
+vendor/lib64/libqtigef.so|d48c81160b002d88b1b51aa77025325f3a69d498
+vendor/lib64/libstagefright_soft_ac4dec.so|185f166167871ea86213212805473ae77645fe98
+vendor/lib64/libstagefright_soft_ddpdec.so|8973f52fa1e0d60b2cf3a63ffcdd12ced223291e
+vendor/lib64/libstagefrightdolby.so|e10e45c66c70d9e5a18e079809fe3d3c41b7507f
+-system_ext/priv-app/daxService/daxService.apk|d1857a2ca1fa4cb89d24de9bacec8d54aa3c3ab3
+
+# Dolby - from OnePlus8 qssi-user-11-RP1A.201005.001-2110102308-release-keys
+system/lib64/vendor.dolby.hardware.dms@2.0.so|deb4231f0e3d16c0dd7648b699c97d8cc2035aa0
+system_ext/etc/permissions/privapp-com.dolby.daxappui.xml|b783016728b17eadfcdad662ccaf546afbeab856
+system_ext/etc/sysconfig/config-com.dolby.daxappui.xml|43c610f41061f49959ce07b26c60427b8767e535
+vendor/etc/dolby/dax-default.xml|267fda106e402dad11dff72330f589fc23432f87
+vendor/lib/libdapparamstorage.so|98e3c70e8081d25afb75da1fe7718bce9217418b
+vendor/lib/libdeccfg.so|f5b4f08095a0abd995ad74306bff1f5079c93452
+vendor/lib/soundfx/libeffectproxy.so|18b81b931c2ec59d848a97d12d903957bf560592
+vendor/lib/soundfx/libhwdap.so|3a51c9e37b55c30e563e12f2fe876d8b554acd07
+vendor/lib/soundfx/libswdap.so|880a9e079c18fcc7357c40607e46cf689db45496
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|7e7a1628c0e2d76893fd35163978b4b133a6149e
+vendor/lib64/libdapparamstorage.so|634e9bc91e17d05b4010dfa7c73b539239137e4a
+vendor/lib64/libdeccfg.so|08119718bc0031323b1fe5ad7d34f395d9c8d0fa
+vendor/lib64/libdlbdsservice.so|38e58c6a61a84d18467ccad89bbed88f7b860017
+vendor/lib64/soundfx/libeffectproxy.so|8f1aadf409ab856e548f8e1de3b70afe6b87d407
+vendor/lib64/soundfx/libhwdap.so|05614e40df404c9a80734ca2cd033ebd67c39804
+vendor/lib64/soundfx/libswdap.so|c6746d6258ef28043383a4241580bf3ac21934d6
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|65843ca63be43bbabf2672d5053e0aa017a8b0da
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|e43278e2100366bd2050edb6660cb861a5e63769
+-system_ext/priv-app/DaxUI/DaxUI.apk|8285268d7e0c43d7c8ef46e329a768b57e6d1d22
+
 # DPM
 system/framework/tcmclient.jar
 system_ext/bin/dpmd

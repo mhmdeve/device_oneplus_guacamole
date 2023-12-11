@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/audio/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_io_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_io_policy.conf \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -152,6 +153,7 @@ PRODUCT_PACKAGES += \
     init.mdm.sh \
     init.oem.rc \
     init.opcamera.rc \
+    init.dolby.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
     init.qcom.early_boot.sh \
@@ -208,6 +210,26 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@3.0.vendor \
     vendor.qti.hardware.display.mapper@4.0.vendor
 
+# Dolby
+PRODUCT_COPY_FILES += \
+    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_omx.so \
+    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_omx_utils.so \
+    prebuilts/vndk/v30/arm64/arch-arm-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib/vndk/libstagefright_foundation.so \
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vndk/libstagefright_omx.so \
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_omx_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vndk/libstagefright_omx_utils.so \
+    prebuilts/vndk/v30/arm64/arch-arm64-armv8-a/shared/vndk-core/libstagefright_foundation.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vndk/libstagefright_foundation.so
+
+PRODUCT_VENDOR_PROPERTIES += \
+    vendor.audio.dolby.ds2.enabled=true \
+    vendor.audio.dolby.ds2.hardbypass=false \
+    persist.vendor.audio_fx.current=dolby \
+    ro.audio.monitorRotation=true \
+    ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1 \
+    ro.vendor.df.effect.conflict=1 \
+    ro.vendor.audio.dolby.dax.support=true \
+    persist.vendor.audio.delta.refresh=true \
+    ro.vendor.audio.dolby.surround.enable=true
+    
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
