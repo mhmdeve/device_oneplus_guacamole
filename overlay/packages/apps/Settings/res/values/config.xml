@@ -21,4 +21,9 @@
 
     <!-- The radius of the enrollment progress bar, in dp -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">115</integer>
+
+    <!-- About device screen, build maintainer -->
+    <string name="build_device_url">https://t.me/evox_guacamole</string>
+    <string name="build_maintainer_summary">Master</string>
+    <string name="build_maintainer_donate_url">https://www.patreon.com/mhmdeveloper</string>
 </resources>
