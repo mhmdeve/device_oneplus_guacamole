@@ -28,6 +28,11 @@
 import /vendor/etc/init/hw/init.qti.ufs.rc
 #ifdef VENDOR_EDIT
 import /vendor/etc/init/hw/init.oem.rc
+import /vendor/etc/init/hw/init.oem.debug.rc
+#endif VENDOR_EDIT
+
+#ifdef VENDOR_EDIT
+import /vendor/etc/init/hw/init.guacamoleg.rc
 #endif VENDOR_EDIT
 
 import /vendor/etc/init/hw/init.qcom.usb.rc
@@ -79,10 +84,6 @@ on init
     write /sys/fs/cgroup/memory/bg/memory.move_charge_at_immigrate 1
     chown root system /sys/fs/cgroup/memory/bg/tasks
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
-
-    # Report max frequency to unity tasks.
-    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
-    write /proc/sys/kernel/sched_lib_mask_force 255
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
@@ -762,7 +763,6 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     group root system wakelock graphics
     disabled
     oneshot
-    seclabel u:r:vendor_qti_init_shell:s0
 
 service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
     class late_start

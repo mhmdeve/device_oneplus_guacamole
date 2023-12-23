@@ -48,22 +48,6 @@ on init
     wait /dev/block/platform/soc/1d84000.ufshc
     symlink /dev/block/platform/soc/1d84000.ufshc /dev/block/bootdevice
 
-    # Create a cpuset for camera-specific processes
-    mkdir /dev/cpuset/camera-daemon
-    write /dev/cpuset/camera-daemon/cpus 0-7
-    write /dev/cpuset/camera-daemon/mems 0
-    chown system system /dev/cpuset/camera-daemon
-    chown system system /dev/cpuset/camera-daemon/tasks
-    chmod 0664 /dev/cpuset/camera-daemon/tasks
-
-    # Create an stune group for camera-specific processes
-    mkdir /dev/stune/camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
-    write /dev/stune/camera-daemon/schedtune.boost 0
-    chown system system /dev/stune/camera-daemon
-    chown system system /dev/stune/camera-daemon/tasks
-    chmod 0664 /dev/stune/camera-daemon/tasks
-    
 on early-fs
     start vold
 
@@ -78,6 +62,12 @@ on fs
     chmod 0666 /dev/audio_ultrasound
     chmod 0666 /dev/sensor_ultrasound
 
+    # bin.zhong@ASTI, 2019/6/17, add for smartboost
+    chown system system /sys/module/smartboost_core/parameters/page_cache_reside_switch
+    # ken.lin@ASTI, 2019/6/21, add for fsc
+    chown system system /sys/module/fsc/parameters/enable
+    chmod 0664 /sys/module/fsc/parameters/enable
+
     #miao.guom@system Bug35643 mkdir and mount op2
     mkdir /mnt/vendor/op2 0660 system system
     mount ext4 /dev/block/bootdevice/by-name/op2 /mnt/vendor/op2 noatime nosuid nodev barrier=1
@@ -90,11 +80,6 @@ on fs
     mount ext4 /dev/block/bootdevice/by-name/op1 /mnt/vendor/op1 noatime nosuid nodev barrier=1
     mkdir /mnt/vendor/oneplus 0660 system system
 
-    mkdir /mnt/vendor/dsp 0770 root root
-    copy /vendor/dsp/cdsp/fastrpc_shell_3 /mnt/vendor/dsp/fastrpc_shell_3
-    chmod 0644 /mnt/vendor/dsp/fastrpc_shell_3
-    mount none /mnt/vendor/dsp/fastrpc_shell_3 /vendor/dsp/cdsp/fastrpc_shell_3 bind
-    
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
@@ -120,18 +105,18 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /data/vendor/hbtp 0750 system system
     mkdir /data/vendor/nnhal 0700 system system
-    mkdir /data/vendor/audio/ultrasound 0770 audio audio
+mkdir /data/vendor/audio/ultrasound 0770 audio audio
 
-on early-boot
+on boot
     start vendor.sensors
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
 on boot
-    # Allow access display power
+# Allow access display power
     chmod 0666 /sys/kernel/hbtp/display_pwr
     chown system system /sys/kernel/hbtp/display_pwr
-    
+
     # Fast Charge
     chown system system /sys/class/qcom-battery/restrict_chg
     chmod 0666 /sys/class/qcom-battery/restrict_chg
@@ -217,7 +202,11 @@ on boot
 	# VPP tuning
 	chown system system /mnt/vendor/persist/vpp/tunings.txt
 	chmod 0666 /mnt/vendor/persist/vpp/tunings.txt
-    
+
+    # Reduce default vibrator gain from 0x80 to 0x55,
+    # also allow gain customization via persistent property
+    write /sys/class/leds/vibrator/gain ${persist.vendor.vib.gain:-0x55}
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 

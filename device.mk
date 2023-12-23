@@ -148,10 +148,14 @@ PRODUCT_COPY_FILES += \
 # Device init scripts
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    ftm_power_config.sh \
     init.class_main.sh \
     init.crda.sh \
+    init.cust.rc \
     init.mdm.sh \
+    init.oem.debug.rc \
     init.oem.rc \
+    init.oem_ftm.rc \
     init.opcamera.rc \
     init.qcom.class_core.sh \
     init.qcom.coex.sh \
@@ -171,7 +175,9 @@ PRODUCT_PACKAGES += \
     init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    vendor.oem_ftm.rc \
+    vendor.oem_ftm_svc_disable.rc
 
 # Display
 PRODUCT_PACKAGES += \
