@@ -47,4 +47,7 @@
     <dimen name="tri_state_up_dialog_position_l">650.0px</dimen>
     <dimen name="tri_state_up_dialog_position_deep">21.0px</dimen>
     <dimen name="tri_state_up_dialog_position_deep_land">21.0px</dimen>
+
+        <!-- Height of the faceunlock image view -->
+    <dimen name="keyguard_face_unlock_margin_bottom">125dp</dimen>
 </resources>
