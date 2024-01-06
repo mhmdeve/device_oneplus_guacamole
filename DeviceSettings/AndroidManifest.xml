@@ -14,7 +14,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="com.aosip.device.DeviceSettings"
+          package="org.lineageos.device.DeviceSettings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -23,7 +23,12 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <protected-broadcast android:name="com.aosip.device.DeviceSettings.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="org.lineageos.device.DeviceSettings.UPDATE_SLIDER_POSITION" />
+
+    <uses-sdk
+        android:minSdkVersion="28"
+        android:targetSdkVersion="29" />
 
     <application
         android:icon="@drawable/ic_settings_device"
@@ -33,13 +38,9 @@
         <!-- Device Settings -->
         <activity
             android:name=".DeviceSettingsActivity"
-            android:label="@string/device_title"
-            android:exported="true">
+            android:label="@string/device_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
             </intent-filter>
             <meta-data
                 android:name="com.android.settings.icon"
@@ -53,9 +54,17 @@
 
         <activity android:name=".DeviceSettings" />
         <activity android:name=".KeyHandler" />
-        <activity 
-            android:name=".BatteryHealthActivity"
-            android:label="@string/battery_health_title"/>
+
+        <activity
+            android:name="org.lineageos.device.DeviceSettings.PanelSettingsActivity"
+            android:exported="true"
+            android:label="@string/panel_category_title"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".TouchscreenGestureActivity"
@@ -66,45 +75,32 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <receiver android:name="com.aosip.device.DeviceSettings.Startup"
-                  android:exported="false">
-            <intent-filter android:priority="500" >
+        
+        <receiver android:name="org.lineageos.device.DeviceSettings.Startup" >
+            <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <!-- Quick Settings Tiles -->
         <service
-            android:name="com.aosip.device.DeviceSettings.DCModeTileService"
-            android:icon="@drawable/ic_dimming_off"
-            android:label="@string/tile_dc_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
-            <intent-filter>
-                <action
-                    android:name="android.service.quicksettings.action.QS_TILE"/>
-            </intent-filter>
-        </service>
-        <service
-            android:name="com.aosip.device.DeviceSettings.HBMModeTileService"
+            android:name="org.lineageos.device.DeviceSettings.HBMModeTileService"
             android:icon="@drawable/ic_hbm_tile"
             android:label="@string/tile_hbm_mode"
-            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE"
-            android:exported="true">
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
                 <action
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
+
         </service>
 
-        <service android:name="com.aosip.device.DeviceSettings.HBMModeService"
-            android:exported="false" />
+        <service android:name="org.lineageos.device.DeviceSettings.AutoHighBrightnessModeService" />
 
-        <!-- Search indexing -->
+        <!-- Search Provider -->
         <provider
             android:name=".ConfigPanelSearchIndexablesProvider"
-            android:authorities="com.aosip.device"
+            android:authorities="org.lineageos.device"
             android:multiprocess="false"
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"

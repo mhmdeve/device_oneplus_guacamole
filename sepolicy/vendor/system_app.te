@@ -19,3 +19,7 @@ allow system_app vendor_sysfs_battery_supply:file { read open getattr };
 allow system_app sysfs_motor:dir r_dir_perms;
 allow system_app sysfs_motor:file { read write getattr open };
 allow system_app self:netlink_kobject_uevent_socket { read bind create setopt };
+
+# Allow system_app to read and write to sysfs_vibrator
+allow system_app sysfs_vibrator:file rw_file_perms;
+allow system_app sysfs_vibrator:dir r_dir_perms;

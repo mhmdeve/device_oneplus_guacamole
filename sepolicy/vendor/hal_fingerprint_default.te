@@ -35,3 +35,5 @@ allow hal_fingerprint_default sysfs_aod:file r_file_perms;
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
 
 allow hal_fingerprint_default sysfs_fpc:file r_file_perms;
+
+allow hal_fingerprint_default sysfs_dm:file rw_file_perms;
