@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2014-2017 The OmniROM Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <string name="device_title">一加设置</string>
+    <string name="device_summary">调整一加特定设备设置</string>
+
+    <!-- Display modes -->
+    <string name="display_title">显示模式</string>
+    <string name="display_summary">调整屏幕设置和首选项</string>
+    <string name="srgb_mode_summary"></string>
+    <string name="srgb_mode_title">自然色</string>
+    <string name="hbm_mode_summary"></string>
+    <string name="hbm_mode_title">高亮度模式</string>
+    <string name="hbm_autobrightness_summary"></string>
+    <string name="hbm_autobrightness_title">自动高亮度模式</string>
+    <string name="hbm_autobrightness_threshold_summary"></string>
+    <string name="hbm_autobrightness_threshold_title">自动高亮度模式阈值 (lux)</string>
+    <string name="dc_mode_summary"></string>
+    <string name="dc_mode_title">DC 调光</string>
+    <string name="dci_mode_summary"></string>
+    <string name="dci_mode_title_new">生动色</string>
+    <string name="Night_mode_summary"></string>
+    <string name="Night_mode_title">夜间模式</string>
+    <string name="panel_category_title">面板模式</string>
+    <string name="panel_category_summary">面板颜色校正模式</string>
+    <string name="off_mode_title">关闭</string>
+    <string name="tile_panel_mode">面板模式</string>
+    <string name="tile_hbm_mode">高亮度模式</string>
+    <string name="tile_dc_mode">DC 调光</string>
+    <string name="panel_mode_info">禁用面板模式需要重新启动</string>
+
+    <!-- Notification slider -->
+    <string name="notification_slider_category_title">通知滑块</string>
+    <string name="notification_slider_selection_dialog_title">操作</string>
+    <string name="notification_slider_top_position">顶部位置</string>
+    <string name="notification_slider_middle_position">中间位置</string>
+    <string name="notification_slider_bottom_position">底部位置</string>
+    <string name="notification_slider_mode_total_silence">完全阻止</string>
+    <string name="notification_slider_mode_alarms_only">仅限闹铃</string>
+    <string name="notification_slider_mode_priority_only">仅限优先</string>
+    <string name="notification_slider_mode_silent">静音</string>
+    <string name="notification_slider_mode_vibrate">振动</string>
+    <string name="notification_slider_mode_none">正常</string>
+    <string name="buttons_dashboard_summary">警报滑块设置</string>
+
+    <!-- Vibration control -->
+    <string name="category_vibrator">振动马达</string>
+    <string name="vib_strength_title_head">系统强度</string>
+    <string name="vib_strength_summary_head">定义振动马达的强度</string>
+    <string name="vib_call_strength_title_head">通话强度</string>
+    <string name="vib_call_strength_summary_head">在来电期间定义振动马达的强度</string>
+    <string name="vib_notif_strength_title_head">通知强度</string>
+    <string name="vib_notif_strength_summary_head">在传入通知期间定义振动马达的强度</string>
+
+    <!-- Pop cam -->
+    <string name="camera_title">相机</string>
+    <string name="always_on_camera_dialog_title">前置摄像头打开对话框</string>
+    <string name="always_on_camera_dialog_summary_on">总是在打开之前询问</string>
+    <string name="always_on_camera_dialog_summary_off">仅在屏幕关闭时询问</string>
+
+    <!-- Screen off Gestures - Input -->
+    <string name="touchscreen_gesture_settings_title">息屏手势</string>
+    <string name="touchscreen_gesture_settings_summary">为快捷操作设定息屏手势</string>
+    <string name="touchscreen_gestures_haptic_feedback_title">触觉反馈</string>
+    <string name="touchscreen_gestures_haptic_feedback_summary">检测到一个触摸屏手势时振动</string>
+    <string name="touchscreen_gesture_two_finger_down_swipe_title">双指向下滑动</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_title">单指向上滑动</string>
+    <string name="touchscreen_gesture_one_finger_up_swipe_home_title">从主页按钮向上滑动</string>
+    <string name="touchscreen_gesture_one_finger_down_swipe_title">单指向下滑动</string>
+    <string name="touchscreen_gesture_one_finger_left_swipe_title">单指向左滑动</string>
+    <string name="touchscreen_gesture_one_finger_right_swipe_title">单指向右滑动</string>
+    <string name="touchscreen_gesture_single_tap_title">单击</string>
+    <string name="touchscreen_gesture_up_arrow_title">绘制一个\"Λ\"</string>
+    <string name="touchscreen_gesture_down_arrow_title">绘制一个\"V\"</string>
+    <string name="touchscreen_gesture_left_arrow_title">绘制一个\"&lt;\"</string>
+    <string name="touchscreen_gesture_right_arrow_title">绘制一个\"&gt;\"</string>
+    <string name="touchscreen_gesture_letter_c_title">绘制字母\"C\"</string>
+    <string name="touchscreen_gesture_letter_e_title">绘制字母\"e\"</string>
+    <string name="touchscreen_gesture_letter_o_title">绘制字母\"O\"</string>
+    <string name="touchscreen_gesture_letter_m_title">绘制字母\"M\"</string>
+    <string name="touchscreen_gesture_letter_s_title">绘制字母\"S\"</string>
+    <string name="touchscreen_gesture_letter_v_title">绘制字母\"V\"</string>
+    <string name="touchscreen_gesture_letter_w_title">绘制字母\"W\"</string>
+    <string name="touchscreen_gesture_letter_z_title">绘制字母\"Z\"</string>
+    <!-- Screen off Gestures - Actions -->
+    <string name="touchscreen_gesture_action_dialog_title">手势操作</string>
+    <string name="touchscreen_gesture_action_do_nothing">不进行任何操作</string>
+    <string name="touchscreen_gesture_action_flashlight">切换手电筒</string>
+    <string name="touchscreen_gesture_action_camera">打开相机</string>
+    <string name="touchscreen_gesture_action_browser">打开浏览器</string>
+    <string name="touchscreen_gesture_action_dialer">打开拨号器</string>
+    <string name="touchscreen_gesture_action_email">查看您的电子邮件</string>
+    <string name="touchscreen_gesture_action_messages">查看您的信息</string>
+    <string name="touchscreen_gesture_action_play_pause_music">播放/暂停音乐播放</string>
+    <string name="touchscreen_gesture_action_previous_track">转到上一曲目</string>
+    <string name="touchscreen_gesture_action_next_track">转到下一曲目</string>
+    <string name="touchscreen_gesture_action_volume_down">降低媒体音量</string>
+    <string name="touchscreen_gesture_action_volume_up">提高媒体音量</string>
+    <string name="touchscreen_gesture_action_ambient_display">显示 Ambient Display</string>
+    
+</resources>
