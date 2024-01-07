@@ -115,4 +115,7 @@
 
     <!-- Build fingerprint from the stock ROM -->
     <string name="config_stockFingerprint" translatable="false">OnePlus/OnePlus7Pro/OnePlus7Pro:11/RKQ1.201022.002/2206171030:user/release-keys</string>
+
+    <!-- Whether devices suports in-display fingerprint when screen is off -->
+    <bool name="config_supportsScreenOffUdfps">true</bool>
 </resources>
