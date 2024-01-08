@@ -293,6 +293,12 @@ vendor/lib64/vendor.oneplus.hardware.CameraMDMHIDL@1.0.so
 # Camera firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Certificate Authority
+-vendor/app/CACertService/CACertService.apk
+vendor/lib64/libcacertclient.so
+vendor/lib64/libjnihelper.so
+vendor/lib64/vendor.qti.hardware.cacert@1.0.so
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
@@ -884,6 +890,10 @@ vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
+# QCC TR
+-vendor/app/QCC-TR-UI/QCC-TR-UI.apk
+vendor/bin/qcc-trd
+
 # QMI
 system/etc/permissions/privapp-permissions-qti.xml
 system/etc/sysconfig/qti_whitelist.xml
@@ -1158,6 +1168,13 @@ vendor/bin/thermal-engine
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Touch-improve
+-vendor/app/com.qualcomm.qti.improvetouch.service/com.qualcomm.qti.improvetouch.service.apk
+vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
+vendor/lib/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
+vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
 
 # Trusted Execution Environment connector
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
