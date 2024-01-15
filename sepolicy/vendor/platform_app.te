@@ -1,19 +1,19 @@
+# Platform App Permissions
+
+# HW Service and Binder Calls for IFAA
 allow platform_app hal_ifaa_hwservice:hwservice_manager find;
 binder_call(platform_app, hal_ifaa_default)
 
+# HW Service and Binder Calls for DMS
 allow platform_app hal_dms_hwservice:hwservice_manager find;
 binder_call(platform_app, hal_dms_default)
+
+# Access audio_config_prop property
 get_prop(platform_app, audio_config_prop)
 
-# Face Unlock
+# Face Unlock Permissions
+# Access vendor_camera_prop property
 get_prop(platform_app, vendor_camera_prop)
 
-r_dir_file(priv_app, vendor_sysfs_battery_supply) 
-allow priv_app vendor_sysfs_kgsl:file { read open getattr };
-allow priv_app hal_cameraHIDL_hwservice:hwservice_manager find;
-allow priv_app oem_service:service_manager { find };
-allow priv_app adsprpcd_file:dir { open read getattr search };
-allow priv_app vendor_sysfs_battery_supply:dir { search };
-allow priv_app vendor_sysfs_battery_supply:file { read write getattr open };
-allow priv_app vendor_xdsp_device:chr_file { ioctl read getattr lock map open watch watch_reads };
-binder_call(priv_app, hal_cameraHIDL_default)
+# Access oem_service in service_manager
+allow platform_app oem_service:service_manager find;

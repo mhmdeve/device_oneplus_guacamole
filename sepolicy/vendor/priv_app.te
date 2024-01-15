@@ -1,13 +1,29 @@
-# Allow priv_app to read files in vendor_sysfs_battery_supply
-r_dir_file(priv_app, vendor_sysfs_battery_supply)
+# Privileged App Permissions
 
+# Read files in vendor_sysfs_battery_supply
+allow priv_app vendor_sysfs_battery_supply:dir { search };
+allow priv_app vendor_sysfs_battery_supply:file { read write getattr open };
+
+# Access oem_service in service_manager
 allow priv_app oem_service:service_manager { find };
 
-allow priv_app vendor_xdsp_device:chr_file r_file_perms;
+# Access chr_file in vendor_xdsp_device
+allow priv_app vendor_xdsp_device:chr_file { ioctl read getattr lock map open watch watch_reads r_file_perms };
+
+# Read files in vendor_sysfs_kgsl
 allow priv_app vendor_sysfs_kgsl:file { read open getattr };
+
+# Camera Permissions
 allow priv_app hal_cameraHIDL_hwservice:hwservice_manager find;
 allow priv_app hal_cameraHIDL_default:binder call;
+
+# Access adsprpcd_file
 allow priv_app adsprpcd_file:dir { open read getattr search };
 allow { appdomain -priv_app } adsprpcd_file:dir r_dir_perms;
+
+# Access hwservice in hal_ifaa_hwservice
 allow priv_app hal_ifaa_hwservice:hwservice_manager find;
+
+# Binder calls for specific services
 binder_call(priv_app, hal_ifaa_default)
+binder_call(priv_app, hal_cameraHIDL_default)
