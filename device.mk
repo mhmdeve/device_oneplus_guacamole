@@ -228,6 +228,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Features
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.samsung.feature.samsung_experience_am.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/com.samsung.feature.samsung_experience_am.xml
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.oneplus7pro \
