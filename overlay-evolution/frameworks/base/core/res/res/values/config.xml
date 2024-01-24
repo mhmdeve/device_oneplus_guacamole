@@ -121,7 +121,4 @@
 
     <!-- Mock Oplus LinearmotorVibratorService -->
     <bool name="config_mockOplusLinearmotorVibratorService">true</bool>
-
-    <!-- Enforce DisplayModeDirector to select user preferred resolution -->
-    <bool name="config_forceToUseSelectedResolution">true</bool>
 </resources>
