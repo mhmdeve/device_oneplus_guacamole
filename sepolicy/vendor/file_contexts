@@ -11,6 +11,7 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/oem_stanvbk    u:object_r:oem_block_device:s0
 /dev/block/platform/soc/1d84000\.ufshc/by-name/param          u:object_r:param_block_device:s0
 /dev/block/platform/soc/1d84000.ufshc/by-name/LOGO_[ab]       u:object_r:boot_block_device:s0
+/dev/block/platform/soc/1d84000.ufshc/by-name/storsec_[ab]    u:object_r:boot_block_device:s0
 /dev/block/vbswap0                                            u:object_r:swap_block_device:s0
 
 # Data files
