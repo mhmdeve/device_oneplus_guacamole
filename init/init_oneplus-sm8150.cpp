@@ -190,6 +190,10 @@ void vendor_load_properties() {
     property_override("vendor.boot.prj_version", std::to_string(prj_version).c_str());
     property_override("ro.boot.hardware.sku", "pn553");
   
+    // fingerprint
+    property_override("ro.build.fingerprint", "OnePlus/OnePlus7Pro/OnePlus7Pro:12/SKQ1.211113.001/P.202303230244:user/release-keys");
+    property_override("ro.build.description","OnePlus7Pro-user 12 SKQ1.211113.001 P.202303230244 release-keys");
+
     // dalvikvm props
     load_dalvikvm_properties();
 
