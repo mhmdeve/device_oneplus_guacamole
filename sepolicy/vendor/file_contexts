@@ -33,6 +33,9 @@
 /dev/silead_fp            u:object_r:fingerprintd_device:s0
 /dev/stmvl53l1_ranging    u:object_r:vl53l1_device:s0
 
+# Fingerpint
+/sys/devices/virtual/touch/tp_dev/fp_state                      u:object_r:vendor_sysfs_sensors:s0
+
 # HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oneplus7pro       u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.1-service-qti                         u:object_r:vendor_hal_neuralnetworks_default_exec:s0
