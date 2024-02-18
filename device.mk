@@ -463,9 +463,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@2.0-service.oneplus7pro \
     libsensorndkbridge
 
-PRODUCT_PACKAGES += \
-    sensors.oneplus
-
 # Servicetracker
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.servicetracker@1.0.vendor
