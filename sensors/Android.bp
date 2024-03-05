@@ -13,8 +13,34 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_config_module_type {
+    name: "oneplus_msmnile_sensors_hal_cc_defaults",
+    module_type: "cc_defaults",
+    config_namespace: "ONEPLUS_MSMNILE_SENSORS",
+    value_variables: ["ALS_POS_X", "ALS_POS_Y", "ALS_RADIUS"],
+    properties: ["cppflags"],
+}
+
+oneplus_msmnile_sensors_hal_cc_defaults {
+    name: "oneplus_msmnile_sensors_hal_defaults",
+    soong_config_variables: {
+        ALS_POS_X: {
+            cppflags: ["-DALS_POS_X=%s"],
+        },
+        ALS_POS_Y: {
+            cppflags: ["-DALS_POS_Y=%s"],
+        },
+        ALS_RADIUS: {
+            cppflags: ["-DALS_RADIUS=%s"],
+            conditions_default: {
+                cppflags: ["-DALS_RADIUS=64"]
+            },
+        },
+    },
+}
+
 cc_binary {
-    name: "android.hardware.sensors@2.0-service.oneplus7pro",
+    name: "android.hardware.sensors@2.0-service.oneplus_msmnile",
     stem: "android.hardware.sensors@2.0-service.multihal",
     defaults: [
         "hidl_defaults",
@@ -54,9 +80,13 @@ cc_binary {
 }
 
 cc_binary {
-    name: "als_correction_service.oneplus7pro",
+    name: "als_correction_service.oneplus_msmnile",
     stem: "als_correction_service",
     init_rc: ["als_correction_service.rc"],
+    defaults: [
+        "oneplus_msmnile_sensors_hal_defaults",
+    ],
+    system_ext_specific: true,
     srcs: [
         "als_correction_service.cpp",
     ],
@@ -65,10 +95,13 @@ cc_binary {
         "libbinder",
         "libgui",
         "libui",
-        "libsysutils",
         "libutils",
+        "liblog",
     ],
     cflags: [
         "-DNO_INPUT",
+    ],
+    local_include_dirs: [
+        "include",
     ],
 }

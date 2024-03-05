@@ -200,7 +200,7 @@ Return<Result> HalProxy::initialize_2_1(
             std::make_unique<WakeLockMessageQueue>(wakeLockDescriptor, true /* resetPointers */);
     std::unique_ptr<WakeLockMessageQueueWrapperBase> wakeLockQueue =
             std::make_unique<WakeLockMessageQueueWrapperHidl>(hidlWakeLockQueue);
-            
+
     return initializeCommon(queue, wakeLockQueue, dynamicCallback);
 }
 
@@ -517,7 +517,11 @@ void HalProxy::initializeSensorList() {
                         ALOGV("Replaced QTI Light sensor with standard light sensor");
                         AlsCorrection::init();
                     }
-                    if (!patchOPPickupSensor(sensor)) continue;
+                    bool keep = patchOPPickupSensor(sensor);
+                    if (!keep) {
+                        continue;
+                    }
+
                     mSensors[sensor.sensorHandle] = sensor;
                 }
             }
@@ -690,7 +694,7 @@ void HalProxy::postEventsToMessageQueue(const std::vector<Event>& eventsList, si
     std::vector<Event> events(eventsList);
     for (auto& event : events) {
         if (static_cast<int>(event.sensorType) == SENSOR_TYPE_QTI_HARDWARE_LIGHT) {
-            AlsCorrection::process(event);
+            AlsCorrection::correct(event.u.scalar);
         }
     }
     if (mPendingWriteEventsQueue.empty()) {
